@@ -13,6 +13,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@react-gis-openlayers/core": "workspace:*",
+    "ol": "10.6.1",
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },
@@ -36,6 +38,5 @@
     "vite": "7.1.9",
     "vite-tsconfig-paths": "5.1.4",
     "vitest": "3.2.4"
-  },
-  "prettier": "@react-gis-openlayers/prettier"
+  }
 }

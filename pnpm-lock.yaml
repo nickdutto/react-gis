@@ -105,6 +105,12 @@ importers:
 
   apps/storybook:
     dependencies:
+      '@react-gis-openlayers/core':
+        specifier: workspace:*
+        version: link:../../packages/core
+      ol:
+        specifier: 10.6.1
+        version: 10.6.1
       react:
         specifier: 19.2.0
         version: 19.2.0

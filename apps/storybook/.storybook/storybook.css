@@ -11,3 +11,22 @@ body.sb-main-fullscreen,
 body.sb-main-fullscreen #storybook-root {
   height: 100%;
 }
+
+#story--map--default--primary-inner,
+#story--control-allcontrols--default--primary-inner,
+#story--control-attributioncontrol--default--primary-inner,
+#story--control-fullscreencontrol--default--primary-inner,
+#story--control-mousepositioncontrol--default--primary-inner,
+#story--control-overviewmapcontrol--default--primary-inner,
+#story--control-rotatecontrol--default--primary-inner,
+#story--control-scalelinecontrol--default--primary-inner,
+#story--control-zoomcontrol--default--primary-inner,
+#story--control-zoomslidercontrol--default--primary-inner,
+#story--control-zoomtoextentcontrol--default--primary-inner,
+#story--layer-heatmaplayer--default--primary-inner,
+#story--layer-imagelayer--default--primary-inner,
+#story--layer-tilelayer--default--primary-inner,
+#story--layer-vectorlayer--default--primary-inner {
+  height: 600px;
+  padding-bottom: 26px;
+}
