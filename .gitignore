@@ -1,0 +1,59 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Build Outputs
+build
+dist
+dist-ssr
+.vercel
+.output
+.nitro
+.vinxi
+
+# Cache
+.cache
+
+# Env
+.env*
+!.env.example
+
+# Testing
+coverage
+
+# Debug
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*storybook.log
+
+# Misc
+.DS_Store
+*.pem
+*.local
+*.suo
+*.ntvs*
+*.njsproj
+*.sw?
+.idea
+
+# VS Code
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+!*.code-workspace
+
+# Turbo
+.turbo
+
+# Cloudflare
+.wrangler
+
+# TanStack
+.tanstack

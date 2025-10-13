@@ -1,0 +1,29 @@
+{
+  "name": "react-gis-openlayers",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "format": "turbo run format --continue",
+    "format:fix": "turbo run format:fix --continue",
+    "lint": "turbo run lint --continue",
+    "lint:fix": "turbo run lint:fix --continue",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "@react-gis-openlayers/prettier": "workspace:*",
+    "@types/node": "22.18.10",
+    "@vitest/ui": "3.2.4",
+    "prettier": "3.6.2",
+    "turbo": "2.5.8",
+    "typescript": "5.9.3",
+    "vitest": "3.2.4"
+  },
+  "prettier": "@react-gis-openlayers/prettier",
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=22"
+  }
+}
