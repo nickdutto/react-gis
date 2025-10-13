@@ -1,0 +1,36 @@
+{
+  "name": "@react-gis-openlayers/core",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "exports": {
+    "./control": {
+      "import": "./src/control/index.ts"
+    },
+    "./layer": {
+      "import": "./src/layer/index.ts"
+    },
+    "./map": {
+      "import": "./src/map/index.ts"
+    }
+  },
+  "scripts": {
+    "format": "prettier --check . --ignore-path ../../.gitignore --ignore-path ../../.prettierignore",
+    "format:fix": "prettier --write . --ignore-path ../../.gitignore --ignore-path ../../.prettierignore",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@react-gis-openlayers/eslint": "workspace:*",
+    "@react-gis-openlayers/typescript": "workspace:*",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.1",
+    "typescript": "5.9.3"
+  },
+  "peerDependencies": {
+    "ol": "^10.6.0",
+    "react": "^19",
+    "react-dom": "^19"
+  }
+}
