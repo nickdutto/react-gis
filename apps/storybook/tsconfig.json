@@ -1,0 +1,10 @@
+{
+  "extends": "@react-gis-openlayers/typescript/dom.json",
+  "include": [".storybook/**/*", "**/*.ts", "**/*.tsx", "eslint.config.js"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  }
+}

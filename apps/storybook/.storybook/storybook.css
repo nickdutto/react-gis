@@ -1,0 +1,13 @@
+.toc-list-custom {
+  border-left: solid 2px #2a2a2a !important;
+}
+
+.toc-list-item-custom:before {
+  border-left: solid 2px #2a2a2a !important;
+}
+
+html,
+body.sb-main-fullscreen,
+body.sb-main-fullscreen #storybook-root {
+  height: 100%;
+}
