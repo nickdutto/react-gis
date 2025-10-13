@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && tsc --noEmit",
-    "start": "node .output/server/index.mjs",
+    "preview": "vite preview",
+    "deploy": "wrangler deploy",
+    "cf-typegen": "wrangler types",
     "format": "prettier --check . --ignore-path ../../.gitignore --ignore-path ../../.prettierignore",
     "format:fix": "prettier --write . --ignore-path ../../.gitignore --ignore-path ../../.prettierignore",
     "lint": "eslint .",
@@ -28,6 +30,7 @@
     "zod": "4.1.12"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "1.13.12",
     "@react-gis-openlayers/eslint": "workspace:*",
     "@react-gis-openlayers/typescript": "workspace:*",
     "@tailwindcss/vite": "4.1.14",
@@ -38,6 +41,7 @@
     "@vitejs/plugin-react": "5.0.4",
     "tailwindcss": "4.1.14",
     "typescript": "5.9.3",
-    "vite-tsconfig-paths": "5.1.4"
+    "vite-tsconfig-paths": "5.1.4",
+    "wrangler": "4.42.2"
   }
 }
