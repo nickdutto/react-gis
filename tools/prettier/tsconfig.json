@@ -1,0 +1,5 @@
+{
+  "extends": "@react-gis-openlayers/typescript/base.json",
+  "include": ["."],
+  "exclude": ["node_modules"]
+}
