@@ -1,0 +1,43 @@
+{
+  "name": "@react-gis-openlayers/docs",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build && tsc --noEmit",
+    "start": "node .output/server/index.mjs",
+    "format": "prettier --check . --ignore-path ../../.gitignore --ignore-path ../../.prettierignore",
+    "format:fix": "prettier --write . --ignore-path ../../.gitignore --ignore-path ../../.prettierignore",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "1.132.47",
+    "@tanstack/react-router-devtools": "1.132.51",
+    "@tanstack/react-start": "1.132.56",
+    "fumadocs-core": "15.8.5",
+    "fumadocs-mdx": "12.0.3",
+    "fumadocs-ui": "15.8.5",
+    "lucide-static": "0.545.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "tailwind-merge": "3.3.1",
+    "vite": "7.1.9",
+    "zod": "4.1.12"
+  },
+  "devDependencies": {
+    "@react-gis-openlayers/eslint": "workspace:*",
+    "@react-gis-openlayers/typescript": "workspace:*",
+    "@tailwindcss/vite": "4.1.14",
+    "@types/mdx": "2.0.13",
+    "@types/node": "22.18.10",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.1",
+    "@vitejs/plugin-react": "5.0.4",
+    "tailwindcss": "4.1.14",
+    "typescript": "5.9.3",
+    "vite-tsconfig-paths": "5.1.4"
+  }
+}
