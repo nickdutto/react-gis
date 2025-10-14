@@ -10,9 +10,13 @@
     "format:fix": "turbo run format:fix --continue",
     "lint": "turbo run lint --continue",
     "lint:fix": "turbo run lint:fix --continue",
-    "typecheck": "turbo run typecheck"
+    "typecheck": "turbo run typecheck",
+    "changeset": "changeset",
+    "changeset:version": "changeset version",
+    "changeset:publish": "changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "2.29.7",
     "@react-gis/prettier": "workspace:*",
     "@tanstack/config": "0.21.0",
     "@types/node": "22.18.10",
