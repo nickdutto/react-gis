@@ -1,6 +1,6 @@
 {
-  "name": "@react-gis/core",
-  "version": "0.1.0",
+  "name": "@react-gis/openlayers",
+  "version": "1.0.0",
   "private": false,
   "type": "module",
   "exports": {

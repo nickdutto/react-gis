@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import type { TypeWithDeepControls } from "storybook-addon-deep-controls";
 
-import { TileLayer, VectorLayer } from "@react-gis/core/layer";
-import { Map as CoreMap } from "@react-gis/core/map";
+import { TileLayer, VectorLayer } from "@react-gis/openlayers/layer";
+import { Map as CoreMap } from "@react-gis/openlayers/map";
 import { Feature } from "ol";
 import { Point } from "ol/geom";
 import { fromLonLat } from "ol/proj";

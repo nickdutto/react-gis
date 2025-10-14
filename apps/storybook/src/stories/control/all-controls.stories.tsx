@@ -10,9 +10,9 @@ import {
   ZoomControl,
   ZoomSliderControl,
   ZoomToExtentControl,
-} from "@react-gis/core/control";
-import { TileLayer } from "@react-gis/core/layer";
-import { Map as CoreMap } from "@react-gis/core/map";
+} from "@react-gis/openlayers/control";
+import { TileLayer } from "@react-gis/openlayers/layer";
+import { Map as CoreMap } from "@react-gis/openlayers/map";
 import OlTileLayer from "ol/layer/Tile";
 import { OSM } from "ol/source";
 

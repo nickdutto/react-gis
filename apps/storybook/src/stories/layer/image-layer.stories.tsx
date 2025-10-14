@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import type { TypeWithDeepControls } from "storybook-addon-deep-controls";
 
-import { ImageLayer, TileLayer } from "@react-gis/core/layer";
-import { Map as CoreMap } from "@react-gis/core/map";
+import { ImageLayer, TileLayer } from "@react-gis/openlayers/layer";
+import { Map as CoreMap } from "@react-gis/openlayers/map";
 import { ImageWMS, OSM } from "ol/source";
 
 const meta = {
