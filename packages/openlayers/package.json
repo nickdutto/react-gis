@@ -3,18 +3,46 @@
   "version": "1.0.0",
   "private": false,
   "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "src"
+  ],
   "exports": {
     "./control": {
-      "import": "./src/control/index.ts"
+      "import": {
+        "types": "./dist/esm/control/index.d.ts",
+        "default": "./dist/esm/control/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/control/index.d.cts",
+        "default": "./dist/cjs/control/index.cjs"
+      }
     },
     "./layer": {
-      "import": "./src/layer/index.ts"
+      "import": {
+        "types": "./dist/esm/layer/index.d.ts",
+        "default": "./dist/esm/layer/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/layer/index.d.cts",
+        "default": "./dist/cjs/layer/index.cjs"
+      }
     },
     "./map": {
-      "import": "./src/map/index.ts"
-    }
+      "import": {
+        "types": "./dist/esm/map/index.d.ts",
+        "default": "./dist/esm/map/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/map/index.d.cts",
+        "default": "./dist/cjs/map/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
   },
   "scripts": {
+    "build": "vite build && publint --strict",
     "format": "prettier --check . --ignore-path ../../.gitignore --ignore-path ../../.prettierignore",
     "format:fix": "prettier --write . --ignore-path ../../.gitignore --ignore-path ../../.prettierignore",
     "lint": "eslint .",
@@ -26,7 +54,9 @@
     "@react-gis/typescript": "workspace:*",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.1",
-    "typescript": "5.9.3"
+    "@vitejs/plugin-react": "5.0.4",
+    "typescript": "5.9.3",
+    "vite": "7.1.9"
   },
   "peerDependencies": {
     "ol": "^10.6.0",
