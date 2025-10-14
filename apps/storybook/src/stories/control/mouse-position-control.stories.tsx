@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import type { TypeWithDeepControls } from "storybook-addon-deep-controls";
 
-import { MousePositionControl } from "@react-gis/core/control";
-import { TileLayer } from "@react-gis/core/layer";
-import { Map as CoreMap } from "@react-gis/core/map";
+import { MousePositionControl } from "@react-gis/openlayers/control";
+import { TileLayer } from "@react-gis/openlayers/layer";
+import { Map as CoreMap } from "@react-gis/openlayers/map";
 import { toStringHDMS } from "ol/coordinate";
 import { Projection } from "ol/proj";
 import { OSM } from "ol/source";
