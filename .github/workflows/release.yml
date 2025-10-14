@@ -1,0 +1,52 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release:
+    name: Release
+    if: github.repository_owner == 'nickdutto'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
+        with:
+          fetch-depth: 0
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4.2.0
+      - name: Setup Node
+        uses: actions/setup-node@v5.0.0
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+      - name: Setup pnpm cache
+        uses: actions/cache@v4.3.0
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      - name: Install dependencies
+        shell: bash
+        run: pnpm install --filter @react-gis/openlayers... --frozen-lockfile
+      - name: Build packages
+        run: pnpm run build --filter="@react-gis/openlayers"
+      - name: Run Changesets (version or publish)
+        uses: changesets/action@v1.5.3
+        with:
+          version: pnpm run changeset:version
+          publish: pnpm run changeset:publish
+          commit: "ci: Version Packages"
+          title: "ci: Version Packages"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
