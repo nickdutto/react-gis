@@ -1,5 +1,5 @@
 {
-  "name": "@react-gis-openlayers/storybook",
+  "name": "@react-gis/storybook",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -13,14 +13,14 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@react-gis-openlayers/core": "workspace:*",
+    "@react-gis/core": "workspace:*",
     "ol": "10.6.1",
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },
   "devDependencies": {
-    "@react-gis-openlayers/eslint": "workspace:*",
-    "@react-gis-openlayers/typescript": "workspace:*",
+    "@react-gis/eslint": "workspace:*",
+    "@react-gis/typescript": "workspace:*",
     "@storybook/addon-a11y": "9.1.10",
     "@storybook/addon-docs": "9.1.10",
     "@storybook/addon-vitest": "9.1.10",

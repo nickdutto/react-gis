@@ -1,12 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import type { TypeWithDeepControls } from "storybook-addon-deep-controls";
 
+import { ZoomSliderControl } from "@react-gis/core/control";
+import { TileLayer } from "@react-gis/core/layer";
+import { Map as CoreMap } from "@react-gis/core/map";
 import { OSM } from "ol/source";
 import { expect } from "storybook/test";
-
-import { ZoomSliderControl } from "@react-gis-openlayers/core/control";
-import { TileLayer } from "@react-gis-openlayers/core/layer";
-import { Map as CoreMap } from "@react-gis-openlayers/core/map";
 
 const meta = {
   title: "Control/ZoomSliderControl",
@@ -64,7 +63,10 @@ export const Default: Story = {
   },
   render: (props) => {
     return (
-      <CoreMap mapOptions={{ controls: [], view: { center: [134, -28], zoom: 4 } }}>
+      <CoreMap
+        mapOptions={{ controls: [], view: { center: [134, -28], zoom: 4 } }}
+        style={{ height: "100%", width: "100%" }}
+      >
         <ZoomSliderControl {...props} />
 
         <TileLayer name="osm" source={new OSM()} />

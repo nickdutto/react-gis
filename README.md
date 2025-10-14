@@ -1,1 +1,1 @@
-# react-gis-openlayers
+# react-gis

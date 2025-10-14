@@ -1,10 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import type { TypeWithDeepControls } from "storybook-addon-deep-controls";
 
+import { TileLayer } from "@react-gis/core/layer";
+import { Map as CoreMap } from "@react-gis/core/map";
 import { OSM } from "ol/source";
-
-import { TileLayer } from "@react-gis-openlayers/core/layer";
-import { Map as CoreMap } from "@react-gis-openlayers/core/map";
 
 const meta = {
   title: "Layer/TileLayer",
@@ -45,7 +44,7 @@ export const Default: Story = {
   },
   render: (props) => {
     return (
-      <CoreMap {...props}>
+      <CoreMap {...props} style={{ height: "100%", width: "100%" }}>
         <TileLayer name="osm" source={new OSM()} />
       </CoreMap>
     );

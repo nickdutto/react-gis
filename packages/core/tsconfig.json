@@ -1,5 +1,5 @@
 {
-  "extends": "@react-gis-openlayers/typescript/dom.json",
+  "extends": "@react-gis/typescript/dom.json",
   "compilerOptions": {},
-  "include": ["**/*.ts", "**/*.tsx", "eslint.config.js"]
+  "include": ["src", "eslint.config.js", "vite.config.ts", "package.json"]
 }

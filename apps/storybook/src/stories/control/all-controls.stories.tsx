@@ -1,8 +1,5 @@
 import type { StoryObj } from "@storybook/react-vite";
 
-import OlTileLayer from "ol/layer/Tile";
-import { OSM } from "ol/source";
-
 import {
   AttributionControl,
   FullScreenControl,
@@ -13,9 +10,11 @@ import {
   ZoomControl,
   ZoomSliderControl,
   ZoomToExtentControl,
-} from "@react-gis-openlayers/core/control";
-import { TileLayer } from "@react-gis-openlayers/core/layer";
-import { Map as CoreMap } from "@react-gis-openlayers/core/map";
+} from "@react-gis/core/control";
+import { TileLayer } from "@react-gis/core/layer";
+import { Map as CoreMap } from "@react-gis/core/map";
+import OlTileLayer from "ol/layer/Tile";
+import { OSM } from "ol/source";
 
 const meta = {
   title: "Control/AllControls",
@@ -45,6 +44,7 @@ export const Default: Story = {
           controls: [],
           view: { center: [134, -28], zoom: 4 },
         }}
+        style={{ height: "100%", width: "100%" }}
       >
         <AttributionControl />
         <FullScreenControl />
