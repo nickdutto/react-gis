@@ -1,5 +1,8 @@
 import type { StoryObj } from "@storybook/react-vite";
 
+import OlTileLayer from "ol/layer/Tile";
+import { OSM } from "ol/source";
+
 import {
   AttributionControl,
   FullScreenControl,
@@ -13,8 +16,6 @@ import {
 } from "@react-gis/openlayers/control";
 import { TileLayer } from "@react-gis/openlayers/layer";
 import { Map as CoreMap } from "@react-gis/openlayers/map";
-import OlTileLayer from "ol/layer/Tile";
-import { OSM } from "ol/source";
 
 const meta = {
   title: "Control/AllControls",

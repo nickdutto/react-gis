@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import type { TypeWithDeepControls } from "storybook-addon-deep-controls";
 
-import { TileLayer, VectorLayer } from "@react-gis/openlayers/layer";
-import { Map as CoreMap } from "@react-gis/openlayers/map";
 import { Feature } from "ol";
 import { Point } from "ol/geom";
 import { fromLonLat } from "ol/proj";
@@ -11,6 +9,9 @@ import VectorSource from "ol/source/Vector";
 import Circle from "ol/style/Circle";
 import Fill from "ol/style/Fill";
 import Style from "ol/style/Style";
+
+import { TileLayer, VectorLayer } from "@react-gis/openlayers/layer";
+import { Map as CoreMap } from "@react-gis/openlayers/map";
 
 const meta = {
   title: "Layer/VectorLayer",

@@ -1,11 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import type { TypeWithDeepControls } from "storybook-addon-deep-controls";
 
-import { HeatmapLayer, TileLayer } from "@react-gis/openlayers/layer";
-import { Map as CoreMap } from "@react-gis/openlayers/map";
 import KML from "ol/format/KML";
 import { OSM } from "ol/source";
 import VectorSource from "ol/source/Vector";
+
+import { HeatmapLayer, TileLayer } from "@react-gis/openlayers/layer";
+import { Map as CoreMap } from "@react-gis/openlayers/map";
 
 const meta = {
   title: "Layer/HeatmapLayer",

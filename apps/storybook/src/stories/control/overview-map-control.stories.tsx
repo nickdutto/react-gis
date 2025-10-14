@@ -1,12 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import type { TypeWithDeepControls } from "storybook-addon-deep-controls";
 
-import { OverviewMapControl } from "@react-gis/openlayers/control";
-import { TileLayer } from "@react-gis/openlayers/layer";
-import { Map as CoreMap } from "@react-gis/openlayers/map";
 import OlTileLayer from "ol/layer/Tile";
 import { OSM } from "ol/source";
 import { expect } from "storybook/test";
+
+import { OverviewMapControl } from "@react-gis/openlayers/control";
+import { TileLayer } from "@react-gis/openlayers/layer";
+import { Map as CoreMap } from "@react-gis/openlayers/map";
 
 const meta = {
   title: "Control/OverviewMapControl",
