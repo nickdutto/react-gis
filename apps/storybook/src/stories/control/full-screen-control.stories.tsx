@@ -112,7 +112,10 @@ export const Default: Story = {
   },
   render: (props) => {
     return (
-      <CoreMap mapOptions={{ controls: [], view: { center: [134, -28], zoom: 4 } }}>
+      <CoreMap
+        mapOptions={{ controls: [], view: { center: [134, -28], zoom: 4 } }}
+        style={{ height: "100%", width: "100%" }}
+      >
         <FullScreenControl {...props} />
 
         <TileLayer name="osm" source={new OSM()} />

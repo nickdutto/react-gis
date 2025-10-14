@@ -74,7 +74,10 @@ export const Default: Story = {
   },
   render: (props) => {
     return (
-      <CoreMap mapOptions={{ controls: [], view: { center: [134, -28], zoom: 4 } }}>
+      <CoreMap
+        mapOptions={{ controls: [], view: { center: [134, -28], zoom: 4 } }}
+        style={{ height: "100%", width: "100%" }}
+      >
         <ZoomToExtentControl {...props} />
 
         <TileLayer name="osm" source={new OSM()} />
@@ -94,7 +97,10 @@ export const Extent: Story = {
   },
   render: (props) => {
     return (
-      <CoreMap mapOptions={{ controls: [], view: { center: [134, -28], zoom: 4 } }}>
+      <CoreMap
+        mapOptions={{ controls: [], view: { center: [134, -28], zoom: 4 } }}
+        style={{ height: "100%", width: "100%" }}
+      >
         <ZoomToExtentControl {...props} />
 
         <TileLayer name="osm" source={new OSM()} />

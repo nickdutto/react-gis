@@ -52,7 +52,7 @@ export const Default: Story = {
   },
   render: (props) => {
     return (
-      <CoreMap {...props}>
+      <CoreMap {...props} style={{ height: "100%", width: "100%" }}>
         <TileLayer name="osm" source={new OSM()} />
 
         <VectorLayer

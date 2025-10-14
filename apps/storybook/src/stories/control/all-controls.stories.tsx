@@ -45,6 +45,7 @@ export const Default: Story = {
           controls: [],
           view: { center: [134, -28], zoom: 4 },
         }}
+        style={{ height: "100%", width: "100%" }}
       >
         <AttributionControl />
         <FullScreenControl />

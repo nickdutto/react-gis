@@ -6,9 +6,6 @@ import type { ComponentProps } from "react";
 import { useRef } from "react";
 
 import { MapProvider } from "./map-provider";
-import styles from "./map.module.css";
-
-import "ol/ol.css";
 
 export type MapProps = ComponentProps<"div"> & {
   mapOptions?: Omit<MapOptions, "view"> & {
@@ -21,7 +18,7 @@ export const Map = ({ mapOptions, children, ...props }: MapProps) => {
 
   return (
     <MapProvider mapRef={mapRef} mapOptions={mapOptions}>
-      <div ref={mapRef} className={styles.map} {...props} />
+      <div ref={mapRef} {...props} />
       {children}
     </MapProvider>
   );
