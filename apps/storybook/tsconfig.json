@@ -1,10 +1,20 @@
 {
   "extends": "@react-gis/typescript/dom.json",
-  "include": [".storybook/**/*", "**/*.ts", "**/*.tsx", "eslint.config.js"],
+  "include": [
+    ".storybook/**/*",
+    "src",
+    "eslint.config.js",
+    "vite.config.ts",
+    "vitest.config.ts",
+    "../../packages/openlayers/src"
+  ],
   "compilerOptions": {
-    "baseUrl": ".",
+    "rootDir": "../../",
+    "baseUrl": "../../",
+    "rootDirs": ["./src", "../../packages/openlayers/src"],
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["apps/storybook/src/*"],
+      "@react-gis/openlayers/*": ["packages/openlayers/src/*"]
     }
   }
 }
