@@ -1,14 +1,15 @@
 {
   "name": "@react-gis/docs",
   "private": true,
-  "sideEffects": false,
-  "type": "module",
   "scripts": {
-    "dev": "vite dev",
-    "build": "vite build && tsc --noEmit",
-    "preview": "vite preview",
-    "deploy": "wrangler deploy",
-    "cf-typegen": "wrangler types",
+    "build": "next build",
+    "dev": "next dev --turbo",
+    "start": "next start",
+    "cf:build": "opennextjs-cloudflare build",
+    "cf:deploy": "opennextjs-cloudflare deploy",
+    "cf:preview": "opennextjs-cloudflare preview",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "postinstall": "fumadocs-mdx",
     "format": "prettier --check . --ignore-path ../../.gitignore --ignore-path ../../.prettierignore",
     "format:fix": "prettier --write . --ignore-path ../../.gitignore --ignore-path ../../.prettierignore",
     "lint": "eslint .",
@@ -16,32 +17,26 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@tanstack/react-router": "1.132.47",
-    "@tanstack/react-router-devtools": "1.132.51",
-    "@tanstack/react-start": "1.132.56",
+    "@opennextjs/cloudflare": "1.10.1",
     "fumadocs-core": "15.8.5",
     "fumadocs-mdx": "12.0.3",
     "fumadocs-ui": "15.8.5",
-    "lucide-static": "0.545.0",
+    "lucide-react": "0.545.0",
+    "next": "15.5.5",
     "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "tailwind-merge": "3.3.1",
-    "vite": "7.1.9",
-    "zod": "4.1.12"
+    "react-dom": "19.2.0"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "1.13.12",
     "@react-gis/eslint": "workspace:*",
     "@react-gis/typescript": "workspace:*",
-    "@tailwindcss/vite": "4.1.14",
+    "@tailwindcss/postcss": "4.1.14",
     "@types/mdx": "2.0.13",
     "@types/node": "22.18.10",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.1",
-    "@vitejs/plugin-react": "5.0.4",
+    "postcss": "8.5.6",
     "tailwindcss": "4.1.14",
     "typescript": "5.9.3",
-    "vite-tsconfig-paths": "5.1.4",
     "wrangler": "4.42.2"
   }
 }

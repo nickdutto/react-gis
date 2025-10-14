@@ -11,6 +11,12 @@ dist-ssr
 .output
 .nitro
 .vinxi
+.next
+.open-next
+/out/
+.content-collections
+.source
+*.tsbuildinfo
 
 # Cache
 .cache
@@ -34,12 +40,15 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
+/.pnp
+.pnp.js
 *.local
 *.suo
 *.ntvs*
 *.njsproj
 *.sw?
 .idea
+next-env.d.ts
 
 # VS Code
 .vscode/*
