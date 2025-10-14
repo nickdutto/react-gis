@@ -5,6 +5,7 @@
   "private": true,
   "exports": {
     "./base": "./base.js",
+    "./nextjs": "./nextjs.js",
     "./react": "./react.js",
     "./storybook": "./storybook.js",
     "./tanstack-router": "./tanstack-router.js"
@@ -12,6 +13,7 @@
   "devDependencies": {
     "@eslint/compat": "1.4.0",
     "@eslint/js": "9.37.0",
+    "@next/eslint-plugin-next": "15.5.5",
     "@tanstack/eslint-plugin-router": "1.132.31",
     "eslint": "9.37.0",
     "eslint-config-prettier": "10.1.8",

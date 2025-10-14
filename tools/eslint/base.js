@@ -11,7 +11,7 @@ import tseslint from "typescript-eslint";
 export default tseslint.config(
   includeIgnoreFile(path.join(import.meta.dirname, "../../.gitignore")),
   {
-    ignores: ["dist/**"],
+    ignores: ["dist/**", "next-env.d.ts"],
   },
   {
     files: ["**/*.js", "**/*.ts", "**/*.tsx"],
