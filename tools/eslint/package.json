@@ -1,5 +1,5 @@
 {
-  "name": "@react-gis-openlayers/eslint",
+  "name": "@react-gis/eslint",
   "version": "0.1.0",
   "type": "module",
   "private": true,

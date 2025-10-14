@@ -1,5 +1,5 @@
 {
-  "name": "@react-gis-openlayers/core",
+  "name": "@react-gis/core",
   "version": "0.1.0",
   "private": false,
   "type": "module",
@@ -22,8 +22,8 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@react-gis-openlayers/eslint": "workspace:*",
-    "@react-gis-openlayers/typescript": "workspace:*",
+    "@react-gis/eslint": "workspace:*",
+    "@react-gis/typescript": "workspace:*",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.1",
     "typescript": "5.9.3"

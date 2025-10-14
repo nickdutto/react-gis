@@ -1,5 +1,5 @@
 {
-  "name": "@react-gis-openlayers/docs",
+  "name": "@react-gis/docs",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -31,8 +31,8 @@
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.13.12",
-    "@react-gis-openlayers/eslint": "workspace:*",
-    "@react-gis-openlayers/typescript": "workspace:*",
+    "@react-gis/eslint": "workspace:*",
+    "@react-gis/typescript": "workspace:*",
     "@tailwindcss/vite": "4.1.14",
     "@types/mdx": "2.0.13",
     "@types/node": "22.18.10",
