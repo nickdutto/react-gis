@@ -1,10 +1,42 @@
 {
   "extends": "@react-gis/typescript/dom.json",
-  "include": ["**/*.ts", "**/*.tsx", "eslint.config.js"],
   "compilerOptions": {
+    "composite": false,
+    "declaration": false,
+    "declarationMap": false,
+    "noUncheckedSideEffectImports": false,
+    "incremental": true,
+    "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"]
-    }
-  }
+      "@/.source": ["./.source/index.ts"],
+      "@/*": ["./src/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "eslint.config.mjs",
+    "postcss.config.mjs",
+    "next.config.mjs"
+  ],
+  // "include": [
+  //   "src",
+  //   "next-env.d.ts",
+  //   "**/*.ts",
+  //   "**/*.tsx",
+  //   ".source/**/*",
+  //   ".next/types/**/*.ts",
+  //   "eslint.config.mjs",
+  //   "next.config.mjs",
+  //   "postcss.config.mjs"
+  // ],
+  "exclude": ["node_modules"]
 }
