@@ -1,5 +1,11 @@
 # @react-gis/openlayers
 
+## 1.0.3
+
+### Patch Changes
+
+- f625ab3: Update/add LICENSE file to openlayers package
+
 ## 1.0.2
 
 ### Patch Changes
