@@ -14,9 +14,11 @@
   },
   "devDependencies": {
     "@react-gis/prettier": "workspace:*",
+    "@tanstack/config": "0.21.0",
     "@types/node": "22.18.10",
     "@vitest/ui": "3.2.4",
     "prettier": "3.6.2",
+    "publint": "0.3.14",
     "turbo": "2.5.8",
     "typescript": "5.9.3",
     "vitest": "3.2.4"
