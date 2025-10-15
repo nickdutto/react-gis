@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { DocsBody, DocsDescription, DocsPage, DocsTitle } from "@/components/layout/page";
 import { getPageImage, source } from "@/lib/source";
 import { getMDXComponents } from "@/mdx-components";
-import { getGithubLastEdit } from "fumadocs-core/content/github";
 import { createRelativeLink } from "fumadocs-ui/mdx";
 import { notFound } from "next/navigation";
 
@@ -17,19 +16,12 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
   const page = source.getPage(cleanSlug);
   if (!page) notFound();
 
-  const time = await getGithubLastEdit({
-    owner: "nickdutto",
-    repo: "react-gis",
-    path: `apps/docs/content/docs/${page.path}`,
-  });
-
   const MDX = page.data.body;
 
   return (
     <DocsPage
       toc={page.data.toc}
       full={page.data.full}
-      lastUpdate={time ? new Date(time) : undefined}
       editOnGithub={{
         owner: "nickdutto",
         repo: "react-gis",
