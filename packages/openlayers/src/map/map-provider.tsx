@@ -1,5 +1,3 @@
-import type { MapOptions } from "ol/Map";
-import type { ViewOptions } from "ol/View";
 import type { ReactNode } from "react";
 
 import { Map as OlMap } from "ol";
@@ -8,14 +6,14 @@ import { fromLonLat } from "ol/proj";
 import View from "ol/View";
 import { useEffect, useState } from "react";
 
+import type { MapOptions } from "./map-options";
+
 import { MapContext } from "./map-context";
 
-type MapProviderProps = {
+export type MapProviderProps = {
   children: ReactNode;
   mapRef: React.RefObject<HTMLDivElement | null>;
-  mapOptions?: Omit<MapOptions, "view"> & {
-    view?: View | ViewOptions;
-  };
+  mapOptions?: MapOptions;
 };
 
 export const MapProvider = ({ children, mapRef, mapOptions }: MapProviderProps) => {

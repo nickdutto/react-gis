@@ -1,16 +1,13 @@
-import type { View } from "ol";
-import type { MapOptions } from "ol/Map";
-import type { ViewOptions } from "ol/View";
 import type { ComponentProps } from "react";
 
 import { useRef } from "react";
 
+import type { MapOptions } from "./map-options";
+
 import { MapProvider } from "./map-provider";
 
 export type MapProps = ComponentProps<"div"> & {
-  mapOptions?: Omit<MapOptions, "view"> & {
-    view?: View | ViewOptions;
-  };
+  mapOptions?: MapOptions;
 };
 
 export const Map = ({ mapOptions, children, ...props }: MapProps) => {
