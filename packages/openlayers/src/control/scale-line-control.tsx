@@ -6,7 +6,7 @@ import type { ControlOptions } from "./use-control";
 
 import { useControl } from "./use-control";
 
-export type ScaleLineControlProps = ControlOptions<OlScaleLineOptions>;
+export interface ScaleLineControlProps extends ControlOptions<OlScaleLineOptions> {}
 
 export const ScaleLineControl = (props: ScaleLineControlProps) => {
   useControl<ScaleLine, ScaleLineControlProps>(ScaleLine, props);

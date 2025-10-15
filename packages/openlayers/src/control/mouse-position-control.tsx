@@ -6,7 +6,7 @@ import type { ControlOptions } from "./use-control";
 
 import { useControl } from "./use-control";
 
-export type MousePositionControlProps = ControlOptions<OlMousePositionOptions>;
+export interface MousePositionControlProps extends ControlOptions<OlMousePositionOptions> {}
 
 export const MousePositionControl = (props: MousePositionControlProps) => {
   useControl<MousePosition, MousePositionControlProps>(MousePosition, props);

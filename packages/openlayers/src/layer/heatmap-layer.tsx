@@ -6,7 +6,7 @@ import type { LayerOptions } from "./use-layer";
 
 import { useLayer } from "./use-layer";
 
-export type HeatmapLayerProps = LayerOptions<HeatmapLayerOptions>;
+export interface HeatmapLayerProps extends LayerOptions<HeatmapLayerOptions> {}
 
 export const HeatmapLayer = (props: HeatmapLayerProps) => {
   useLayer<OlHeatmapLayer, HeatmapLayerProps>(OlHeatmapLayer, props);

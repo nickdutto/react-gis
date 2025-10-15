@@ -6,7 +6,7 @@ import type { ControlOptions } from "./use-control";
 
 import { useControl } from "./use-control";
 
-export type OverviewMapControlProps = ControlOptions<OlOverviewMapOptions>;
+export interface OverviewMapControlProps extends ControlOptions<OlOverviewMapOptions> {}
 
 export const OverviewMapControl = (props: OverviewMapControlProps) => {
   useControl<OverviewMap, OverviewMapControlProps>(OverviewMap, props);

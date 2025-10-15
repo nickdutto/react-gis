@@ -7,7 +7,7 @@ import type { LayerOptions } from "./use-layer";
 
 import { useLayer } from "./use-layer";
 
-export type ImageLayerProps = LayerOptions<BaseImageOptions<ImageSource>>;
+export interface ImageLayerProps extends LayerOptions<BaseImageOptions<ImageSource>> {}
 
 export const ImageLayer = (props: ImageLayerProps) => {
   useLayer<OlImageLayer<ImageSource>, ImageLayerProps>(OlImageLayer, props);

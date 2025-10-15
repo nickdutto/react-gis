@@ -6,7 +6,7 @@ import type { ControlOptions } from "./use-control";
 
 import { useControl } from "./use-control";
 
-export type ZoomSliderControlProps = ControlOptions<OlZoomSliderOptions>;
+export interface ZoomSliderControlProps extends ControlOptions<OlZoomSliderOptions> {}
 
 export const ZoomSliderControl = (props: ZoomSliderControlProps) => {
   useControl<ZoomSlider, ZoomSliderControlProps>(ZoomSlider, props);

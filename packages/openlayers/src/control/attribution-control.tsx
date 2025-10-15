@@ -6,7 +6,7 @@ import type { ControlOptions } from "./use-control";
 
 import { useControl } from "./use-control";
 
-export type AttributionControlProps = ControlOptions<AttributionControlOptions>;
+export interface AttributionControlProps extends ControlOptions<AttributionControlOptions> {}
 
 export const AttributionControl = (props: AttributionControlProps) => {
   useControl<Attribution, AttributionControlProps>(Attribution, props);

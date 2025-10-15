@@ -6,7 +6,7 @@ import type { ControlOptions } from "./use-control";
 
 import { useControl } from "./use-control";
 
-export type RotateControlProps = ControlOptions<OlRotateOptions>;
+export interface RotateControlProps extends ControlOptions<OlRotateOptions> {}
 
 export const RotateControl = (props: RotateControlProps) => {
   useControl<Rotate, RotateControlProps>(Rotate, props);

@@ -6,7 +6,7 @@ import type { ControlOptions } from "./use-control";
 
 import { useControl } from "./use-control";
 
-export type FullScreenControlProps = ControlOptions<OlFullScreenOptions>;
+export interface FullScreenControlProps extends ControlOptions<OlFullScreenOptions> {}
 
 export const FullScreenControl = (props: FullScreenControlProps) => {
   useControl<FullScreen, FullScreenControlProps>(FullScreen, props);
