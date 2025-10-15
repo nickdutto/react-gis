@@ -1,8 +1,5 @@
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 
-import { GitHubIcon } from "@/components/icon/github-icon";
-import { StorybookIcon } from "@/components/icon/storybook-icon";
-
 /**
  * Shared layout configurations
  *
@@ -23,17 +20,6 @@ export function baseOptions(): BaseLayoutProps {
       ),
     },
     // see https://fumadocs.dev/docs/ui/navigation/links
-    links: [
-      {
-        text: "GitHub",
-        icon: <GitHubIcon />,
-        url: "https://github.com/nickdutto/react-gis",
-      },
-      {
-        text: "Storybook",
-        icon: <StorybookIcon />,
-        url: "https://reactgis-storybook.nickdutto.dev",
-      },
-    ],
+    links: [],
   };
 }

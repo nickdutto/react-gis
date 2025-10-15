@@ -188,7 +188,7 @@ export function DocsLayout(props: DocsLayoutProps) {
                 buttonVariants({
                   size: "icon-sm",
                   color: "ghost",
-                  className: "lg:hidden",
+                  className: "md:hidden",
                 }),
               )}
               aria-label={item.label}
@@ -376,7 +376,7 @@ function DocsNavbar({
                 item={item}
                 className={cn(
                   buttonVariants({ size: "icon-sm", color: "ghost" }),
-                  "text-fd-muted-foreground max-lg:hidden",
+                  "text-fd-muted-foreground max-md:hidden",
                 )}
                 aria-label={item.label}
               >
