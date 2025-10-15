@@ -1,5 +1,6 @@
 {
   "name": "@react-gis/openlayers",
+  "license": "MIT",
   "version": "1.0.3",
   "private": false,
   "type": "module",
