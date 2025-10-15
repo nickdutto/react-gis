@@ -14,7 +14,7 @@ import { useMediaQuery } from "fumadocs-core/utils/use-media-query";
 import { useOnChange } from "fumadocs-core/utils/use-on-change";
 import { useSidebar } from "fumadocs-ui/contexts/sidebar";
 import { useTreeContext, useTreePath } from "fumadocs-ui/contexts/tree";
-import { ChevronDown, ExternalLink } from "lucide-react";
+import { ChevronDown, CodeXml, ExternalLink } from "lucide-react";
 import { createContext, Fragment, useContext, useMemo, useRef, useState } from "react";
 
 import { cn } from "../lib/cn";
@@ -53,6 +53,10 @@ interface InternalContext {
   defaultOpenLevel: number;
   prefetch: boolean;
   level: number;
+}
+
+function stripFileExtension(path: string) {
+  return path.replace(/\.(md?|mdx?)$/, "");
 }
 
 const itemVariants = cva(
@@ -238,7 +242,9 @@ export function SidebarItem({
   icon?: ReactNode;
 }) {
   const pathname = usePathname();
-  const active = props.href !== undefined && isActive(props.href, pathname, false);
+  const active =
+    props.href !== undefined &&
+    isActive(stripFileExtension(props.href), stripFileExtension(pathname), false);
   const { prefetch } = useInternalContext();
 
   return (
@@ -265,7 +271,6 @@ export function SidebarFolder({
   useOnChange(defaultOpen, (v) => {
     if (v) setOpen(v);
   });
-
   return (
     <Collapsible open={open} onOpenChange={setOpen} {...props}>
       <FolderContext.Provider value={useMemo(() => ({ open, setOpen }), [open])}>
@@ -472,7 +477,7 @@ function PageTreeFolder({ item, ...props }: { item: PageTree.Folder; children: R
         </SidebarFolderLink>
       ) : (
         <SidebarFolderTrigger {...props}>
-          {item.icon}
+          {item.name === "API Reference" ? <CodeXml /> : item.icon}
           {item.name}
         </SidebarFolderTrigger>
       )}

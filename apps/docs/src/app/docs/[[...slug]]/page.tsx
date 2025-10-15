@@ -7,9 +7,14 @@ import { createRelativeLink } from "fumadocs-ui/mdx";
 import { DocsBody, DocsDescription, DocsPage, DocsTitle } from "fumadocs-ui/page";
 import { notFound } from "next/navigation";
 
+function removeFileExtension(slug: string[]) {
+  return slug.map((part) => part.replace(/\.(md?|mdx?)$/, ""));
+}
+
 export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
   const params = await props.params;
-  const page = source.getPage(params.slug);
+  const cleanSlug = removeFileExtension(params.slug ?? []);
+  const page = source.getPage(cleanSlug);
   if (!page) notFound();
 
   const time = await getGithubLastEdit({
@@ -56,7 +61,8 @@ export async function generateStaticParams() {
 // eslint-disable-next-line react-refresh/only-export-components
 export async function generateMetadata(props: PageProps<"/docs/[[...slug]]">): Promise<Metadata> {
   const params = await props.params;
-  const page = source.getPage(params.slug);
+  const cleanSlug = removeFileExtension(params.slug ?? []);
+  const page = source.getPage(cleanSlug);
   if (!page) notFound();
 
   return {
