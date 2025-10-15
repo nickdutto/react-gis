@@ -7,6 +7,14 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+// eslint-disable-next-line react-refresh/only-export-components
+export const metadata = {
+  title: {
+    template: "%s | ReactGIS",
+    default: "ReactGIS",
+  },
+};
+
 export default function Layout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={inter.className} suppressHydrationWarning>
