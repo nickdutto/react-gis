@@ -1,6 +1,6 @@
 {
   "main": ".open-next/worker.js",
-  "name": "react-gis",
+  "name": "react-gis-docs",
   "compatibility_date": "2025-03-25",
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
