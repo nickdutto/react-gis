@@ -1,0 +1,50 @@
+---
+title: zoom-control
+---
+
+## Functions
+
+### ZoomControl()
+
+```ts
+function ZoomControl(props: ZoomControlProps): null;
+```
+
+Defined in: [packages/openlayers/src/control/zoom-control.tsx:11](https://github.com/nickdutto/react-gis/blob/main/packages/openlayers/src/control/zoom-control.tsx#L11)
+
+#### Parameters
+
+| Parameter | Type                                    |
+| :-------- | :-------------------------------------- |
+| `props`   | [`ZoomControlProps`](#zoomcontrolprops) |
+
+#### Returns
+
+`null`
+
+## Interfaces
+
+### ZoomControlProps
+
+Defined in: [packages/openlayers/src/control/zoom-control.tsx:9](https://github.com/nickdutto/react-gis/blob/main/packages/openlayers/src/control/zoom-control.tsx#L9)
+
+#### Extends
+
+- [`ControlOptions`](use-control.mdx#controloptions)\<`OlZoomOptions`\>
+
+#### Properties
+
+| Property                                          | Type                           | Description                                                                                                            | Inherited from                    |
+| :------------------------------------------------ | :----------------------------- | :--------------------------------------------------------------------------------------------------------------------- | :-------------------------------- |
+| <a id="classname"></a> `className?`               | `string`                       | CSS class name.                                                                                                        | `ControlOptions.className`        |
+| <a id="delta"></a> `delta?`                       | `number`                       | The zoom delta applied on each click.                                                                                  | `ControlOptions.delta`            |
+| <a id="duration"></a> `duration?`                 | `number`                       | Animation duration in milliseconds.                                                                                    | `ControlOptions.duration`         |
+| <a id="element"></a> `element?`                   | `HTMLElement`                  | The element is the control's container element. This only needs to be specified if you're developing a custom control. | `ControlOptions.element`          |
+| <a id="render"></a> `render?`                     | (`arg0`: `MapEvent`) => `void` | Function called when the control should be re-rendered. This is called in a `requestAnimationFrame` callback.          | `ControlOptions.render`           |
+| <a id="target"></a> `target?`                     | `string` \| `HTMLElement`      | Specify a target if you want the control to be rendered outside of the map's viewport.                                 | `ControlOptions.target`           |
+| <a id="zoominclassname"></a> `zoomInClassName?`   | `string`                       | CSS class name for the zoom-in button.                                                                                 | `ControlOptions.zoomInClassName`  |
+| <a id="zoominlabel"></a> `zoomInLabel?`           | `string` \| `HTMLElement`      | Text label to use for the zoom-in button. Instead of text, also an element (e.g. a `span` element) can be used.        | `ControlOptions.zoomInLabel`      |
+| <a id="zoomintiplabel"></a> `zoomInTipLabel?`     | `string`                       | Text label to use for the button tip.                                                                                  | `ControlOptions.zoomInTipLabel`   |
+| <a id="zoomoutclassname"></a> `zoomOutClassName?` | `string`                       | CSS class name for the zoom-out button.                                                                                | `ControlOptions.zoomOutClassName` |
+| <a id="zoomoutlabel"></a> `zoomOutLabel?`         | `string` \| `HTMLElement`      | Text label to use for the zoom-out button. Instead of text, also an element (e.g. a `span` element) can be used.       | `ControlOptions.zoomOutLabel`     |
+| <a id="zoomouttiplabel"></a> `zoomOutTipLabel?`   | `string`                       | Text label to use for the button tip.                                                                                  | `ControlOptions.zoomOutTipLabel`  |

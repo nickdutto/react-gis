@@ -14,7 +14,7 @@ import { useMediaQuery } from "fumadocs-core/utils/use-media-query";
 import { useOnChange } from "fumadocs-core/utils/use-on-change";
 import { useSidebar } from "fumadocs-ui/contexts/sidebar";
 import { useTreeContext, useTreePath } from "fumadocs-ui/contexts/tree";
-import { ChevronDown, CodeXml, ExternalLink } from "lucide-react";
+import { ChevronDown, ExternalLink } from "lucide-react";
 import { createContext, Fragment, useContext, useMemo, useRef, useState } from "react";
 
 import { cn } from "../lib/cn";
@@ -477,7 +477,7 @@ function PageTreeFolder({ item, ...props }: { item: PageTree.Folder; children: R
         </SidebarFolderLink>
       ) : (
         <SidebarFolderTrigger {...props}>
-          {item.name === "API Reference" ? <CodeXml /> : item.icon}
+          {item.icon}
           {item.name}
         </SidebarFolderTrigger>
       )}

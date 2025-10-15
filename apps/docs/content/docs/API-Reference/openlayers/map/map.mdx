@@ -1,0 +1,41 @@
+---
+title: map
+---
+
+## Functions
+
+### Map()
+
+```ts
+function Map(__namedParameters: MapProps): Element;
+```
+
+Defined in: [packages/openlayers/src/map/map.tsx:13](https://github.com/nickdutto/react-gis/blob/main/packages/openlayers/src/map/map.tsx#L13)
+
+#### Parameters
+
+| Parameter           | Type                    |
+| :------------------ | :---------------------- |
+| `__namedParameters` | [`MapProps`](#mapprops) |
+
+#### Returns
+
+`Element`
+
+## Type Aliases
+
+### MapProps
+
+```ts
+type MapProps = ComponentProps<"div"> & {
+  mapOptions?: MapOptions;
+};
+```
+
+Defined in: [packages/openlayers/src/map/map.tsx:9](https://github.com/nickdutto/react-gis/blob/main/packages/openlayers/src/map/map.tsx#L9)
+
+#### Type Declaration
+
+| Name          | Type                                       |
+| :------------ | :----------------------------------------- |
+| `mapOptions?` | [`MapOptions`](map-options.mdx#mapoptions) |

@@ -1,0 +1,50 @@
+---
+title: attribution-control
+---
+
+## Functions
+
+### AttributionControl()
+
+```ts
+function AttributionControl(props: AttributionControlProps): null;
+```
+
+Defined in: [packages/openlayers/src/control/attribution-control.tsx:11](https://github.com/nickdutto/react-gis/blob/main/packages/openlayers/src/control/attribution-control.tsx#L11)
+
+#### Parameters
+
+| Parameter | Type                                                  |
+| :-------- | :---------------------------------------------------- |
+| `props`   | [`AttributionControlProps`](#attributioncontrolprops) |
+
+#### Returns
+
+`null`
+
+## Interfaces
+
+### AttributionControlProps
+
+Defined in: [packages/openlayers/src/control/attribution-control.tsx:9](https://github.com/nickdutto/react-gis/blob/main/packages/openlayers/src/control/attribution-control.tsx#L9)
+
+#### Extends
+
+- [`ControlOptions`](use-control.mdx#controloptions)\<`AttributionControlOptions`\>
+
+#### Properties
+
+| Property                                            | Type                                                            | Description                                                                                                                                                                                                                                                                                                                                                                                                      | Inherited from                                                                                                        |
+| :-------------------------------------------------- | :-------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- |
+| <a id="attributions"></a> `attributions?`           | `string` \| `string`[]                                          | Optional attribution(s) that will always be displayed regardless of the layers rendered. **Caution:** Attributions are rendered dynamically using `innerHTML`, which can lead to potential [**XSS (Cross-Site Scripting)**](https://en.wikipedia.org/wiki/Cross-site_scripting) vulnerabilities. Use this feature only for trusted content or ensure that the content is properly sanitized before inserting it. | `ControlOptions.attributions`                                                                                         |
+| <a id="classname"></a> `className?`                 | `string`                                                        | CSS class name.                                                                                                                                                                                                                                                                                                                                                                                                  | `ControlOptions.className`                                                                                            |
+| <a id="collapseclassname"></a> `collapseClassName?` | `string`                                                        | CSS class name for the expanded attributions button.                                                                                                                                                                                                                                                                                                                                                             | `ControlOptions.collapseClassName`                                                                                    |
+| <a id="collapsed"></a> `collapsed?`                 | `boolean`                                                       | Specify if attributions should be collapsed at startup.                                                                                                                                                                                                                                                                                                                                                          | `ControlOptions.collapsed`                                                                                            |
+| <a id="collapselabel"></a> `collapseLabel?`         | `string` \| `HTMLElement`                                       | Text label to use for the expanded attributions button. Instead of text, also an element (e.g. a `span` element) can be used.                                                                                                                                                                                                                                                                                    | `ControlOptions.collapseLabel`                                                                                        |
+| <a id="collapsible"></a> `collapsible?`             | `boolean`                                                       | Specify if attributions can be collapsed. If not specified, sources control this behavior with their `attributionsCollapsible` setting.                                                                                                                                                                                                                                                                          | `ControlOptions.collapsible`                                                                                          |
+| <a id="element"></a> `element?`                     | `HTMLElement`                                                   | The element is the control's container element. This only needs to be specified if you're developing a custom control.                                                                                                                                                                                                                                                                                           | `ControlOptions.element`                                                                                              |
+| <a id="expandclassname"></a> `expandClassName?`     | `string`                                                        | CSS class name for the collapsed attributions button.                                                                                                                                                                                                                                                                                                                                                            | `ControlOptions.expandClassName`                                                                                      |
+| <a id="label"></a> `label?`                         | `string` \| `HTMLElement`                                       | Text label to use for the collapsed attributions button. Instead of text, also an element (e.g. a `span` element) can be used.                                                                                                                                                                                                                                                                                   | `ControlOptions.label`                                                                                                |
+| <a id="render"></a> `render?`                       | (`arg0`: `MapEvent`) => `void` & (`arg0`: `MapEvent`) => `void` | Function called when the control should be re-rendered. This is called in a `requestAnimationFrame` callback.                                                                                                                                                                                                                                                                                                    | [`FullScreenControlProps`](full-screen-control.mdx#fullscreencontrolprops).[`render`](full-screen-control.mdx#render) |
+| <a id="target"></a> `target?`                       | `string` \| `HTMLElement`                                       | Specify a target if you want the control to be rendered outside of the map's viewport.                                                                                                                                                                                                                                                                                                                           | `ControlOptions.target`                                                                                               |
+| <a id="tiplabel"></a> `tipLabel?`                   | `string`                                                        | Text label to use for the button tip.                                                                                                                                                                                                                                                                                                                                                                            | `ControlOptions.tipLabel`                                                                                             |

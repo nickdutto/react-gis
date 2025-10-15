@@ -1,0 +1,51 @@
+---
+title: image-layer
+---
+
+## Functions
+
+### ImageLayer()
+
+```ts
+function ImageLayer(props: ImageLayerProps): null;
+```
+
+Defined in: [packages/openlayers/src/layer/image-layer.tsx:12](https://github.com/nickdutto/react-gis/blob/main/packages/openlayers/src/layer/image-layer.tsx#L12)
+
+#### Parameters
+
+| Parameter | Type                                  |
+| :-------- | :------------------------------------ |
+| `props`   | [`ImageLayerProps`](#imagelayerprops) |
+
+#### Returns
+
+`null`
+
+## Interfaces
+
+### ImageLayerProps
+
+Defined in: [packages/openlayers/src/layer/image-layer.tsx:10](https://github.com/nickdutto/react-gis/blob/main/packages/openlayers/src/layer/image-layer.tsx#L10)
+
+#### Extends
+
+- [`LayerOptions`](use-layer.mdx#layeroptions)\<`BaseImageOptions`\<`ImageSource`\>\>
+
+#### Properties
+
+| Property                                    | Type                            | Description                                                                                                                                                                                                                                                                                                          | Inherited from               |
+| :------------------------------------------ | :------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------- |
+| <a id="classname"></a> `className?`         | `string`                        | A CSS class name to set to the layer element.                                                                                                                                                                                                                                                                        | `LayerOptions.className`     |
+| <a id="extent"></a> `extent?`               | `Extent`                        | The bounding extent for layer rendering. The layer will not be rendered outside of this extent.                                                                                                                                                                                                                      | `LayerOptions.extent`        |
+| <a id="map"></a> `map?`                     | `Map`                           | Sets the layer as overlay on a map. The map will not manage this layer in its layers collection, and the layer will be rendered on top. This is useful for temporary layers. The standard way to add a layer to a map and have it managed by the map is to use import ("../Map.js").default#addLayer map.addLayer(). | `LayerOptions.map`           |
+| <a id="maxresolution"></a> `maxResolution?` | `number`                        | The maximum resolution (exclusive) below which this layer will be visible.                                                                                                                                                                                                                                           | `LayerOptions.maxResolution` |
+| <a id="maxzoom"></a> `maxZoom?`             | `number`                        | The maximum view zoom level (inclusive) at which this layer will be visible.                                                                                                                                                                                                                                         | `LayerOptions.maxZoom`       |
+| <a id="minresolution"></a> `minResolution?` | `number`                        | The minimum resolution (inclusive) at which this layer will be visible.                                                                                                                                                                                                                                              | `LayerOptions.minResolution` |
+| <a id="minzoom"></a> `minZoom?`             | `number`                        | The minimum view zoom level (exclusive) above which this layer will be visible.                                                                                                                                                                                                                                      | `LayerOptions.minZoom`       |
+| <a id="name"></a> `name`                    | `string`                        | -                                                                                                                                                                                                                                                                                                                    | `LayerOptions.name`          |
+| <a id="opacity"></a> `opacity?`             | `number`                        | Opacity (0, 1).                                                                                                                                                                                                                                                                                                      | `LayerOptions.opacity`       |
+| <a id="properties"></a> `properties?`       | \{ \[`x`: `string`\]: `any`; \} | Arbitrary observable properties. Can be accessed with `#get()` and `#set()`.                                                                                                                                                                                                                                         | `LayerOptions.properties`    |
+| <a id="source"></a> `source?`               | `ImageSource`                   | Source for this layer.                                                                                                                                                                                                                                                                                               | `LayerOptions.source`        |
+| <a id="visible"></a> `visible?`             | `boolean`                       | Visibility.                                                                                                                                                                                                                                                                                                          | `LayerOptions.visible`       |
+| <a id="zindex"></a> `zIndex?`               | `number`                        | The z-index for layer rendering. At rendering time, the layers will be ordered, first by Z-index and then by position. When `undefined`, a `zIndex` of 0 is assumed for layers that are added to the map's `layers` collection, or `Infinity` when the layer's `setMap()` method was used.                           | `LayerOptions.zIndex`        |

@@ -1,0 +1,45 @@
+---
+title: map-provider
+---
+
+## Functions
+
+### MapProvider()
+
+```ts
+function MapProvider(__namedParameters: MapProviderProps): Element;
+```
+
+Defined in: [packages/openlayers/src/map/map-provider.tsx:19](https://github.com/nickdutto/react-gis/blob/main/packages/openlayers/src/map/map-provider.tsx#L19)
+
+#### Parameters
+
+| Parameter           | Type                                    |
+| :------------------ | :-------------------------------------- |
+| `__namedParameters` | [`MapProviderProps`](#mapproviderprops) |
+
+#### Returns
+
+`Element`
+
+## Type Aliases
+
+### MapProviderProps
+
+```ts
+type MapProviderProps = {
+  children: ReactNode;
+  mapOptions?: MapOptions;
+  mapRef: React.RefObject<HTMLDivElement | null>;
+};
+```
+
+Defined in: [packages/openlayers/src/map/map-provider.tsx:13](https://github.com/nickdutto/react-gis/blob/main/packages/openlayers/src/map/map-provider.tsx#L13)
+
+#### Properties
+
+| Property                              | Type                                            |
+| :------------------------------------ | :---------------------------------------------- |
+| <a id="children"></a> `children`      | `ReactNode`                                     |
+| <a id="mapoptions"></a> `mapOptions?` | [`MapOptions`](map-options.mdx#mapoptions)      |
+| <a id="mapref"></a> `mapRef`          | `React.RefObject`\<`HTMLDivElement` \| `null`\> |

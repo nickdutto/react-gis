@@ -1,7 +1,7 @@
 {
   "$schema": "https://typedoc.org/schema.json",
   "classPropertiesFormat": "table",
-  "cleanOutputDir": true,
+  "cleanOutputDir": false,
   "enumMembersFormat": "table",
   "expandObjects": true,
   "expandParameters": true,
@@ -61,6 +61,6 @@
     "./scripts/typedoc/typedoc-frontmatter.mjs"
   ],
   "fileExtension": ".mdx",
-  "out": "./apps/docs/content/docs/API-Reference",
+  "out": "./apps/docs/content/docs/API-Reference/openlayers",
   "tsconfig": "./packages/openlayers/tsconfig.json"
 }

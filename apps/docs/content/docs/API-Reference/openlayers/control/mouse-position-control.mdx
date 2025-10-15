@@ -1,0 +1,46 @@
+---
+title: mouse-position-control
+---
+
+## Functions
+
+### MousePositionControl()
+
+```ts
+function MousePositionControl(props: MousePositionControlProps): null;
+```
+
+Defined in: [packages/openlayers/src/control/mouse-position-control.tsx:11](https://github.com/nickdutto/react-gis/blob/main/packages/openlayers/src/control/mouse-position-control.tsx#L11)
+
+#### Parameters
+
+| Parameter | Type                                                      |
+| :-------- | :-------------------------------------------------------- |
+| `props`   | [`MousePositionControlProps`](#mousepositioncontrolprops) |
+
+#### Returns
+
+`null`
+
+## Interfaces
+
+### MousePositionControlProps
+
+Defined in: [packages/openlayers/src/control/mouse-position-control.tsx:9](https://github.com/nickdutto/react-gis/blob/main/packages/openlayers/src/control/mouse-position-control.tsx#L9)
+
+#### Extends
+
+- [`ControlOptions`](use-control.mdx#controloptions)\<`OlMousePositionOptions`\>
+
+#### Properties
+
+| Property                                          | Type                                                            | Description                                                                                                                                                                                                                                                                                                                                     | Inherited from                                                                                                        |
+| :------------------------------------------------ | :-------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- |
+| <a id="classname"></a> `className?`               | `string`                                                        | CSS class name.                                                                                                                                                                                                                                                                                                                                 | `ControlOptions.className`                                                                                            |
+| <a id="coordinateformat"></a> `coordinateFormat?` | `CoordinateFormat`                                              | Coordinate format.                                                                                                                                                                                                                                                                                                                              | `ControlOptions.coordinateFormat`                                                                                     |
+| <a id="element"></a> `element?`                   | `HTMLElement`                                                   | The element is the control's container element. This only needs to be specified if you're developing a custom control.                                                                                                                                                                                                                          | `ControlOptions.element`                                                                                              |
+| <a id="placeholder"></a> `placeholder?`           | `string`                                                        | Markup to show when the mouse position is not available (e.g. when the pointer leaves the map viewport). By default, a non-breaking space is rendered initially and the last position is retained when the mouse leaves the viewport. When a string is provided (e.g. `'no position'` or `''` for an empty string) it is used as a placeholder. | `ControlOptions.placeholder`                                                                                          |
+| <a id="projection"></a> `projection?`             | `ProjectionLike`                                                | Projection. Default is the view projection.                                                                                                                                                                                                                                                                                                     | `ControlOptions.projection`                                                                                           |
+| <a id="render"></a> `render?`                     | (`arg0`: `MapEvent`) => `void` & (`arg0`: `MapEvent`) => `void` | Function called when the control should be re-rendered. This is called in a `requestAnimationFrame` callback.                                                                                                                                                                                                                                   | [`FullScreenControlProps`](full-screen-control.mdx#fullscreencontrolprops).[`render`](full-screen-control.mdx#render) |
+| <a id="target"></a> `target?`                     | `string` \| `HTMLElement`                                       | Specify a target if you want the control to be rendered outside of the map's viewport.                                                                                                                                                                                                                                                          | `ControlOptions.target`                                                                                               |
+| <a id="wrapx"></a> `wrapX?`                       | `boolean`                                                       | Wrap the world horizontally on the projection's antimeridian, if it is a global projection.                                                                                                                                                                                                                                                     | `ControlOptions.wrapX`                                                                                                |
