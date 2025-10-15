@@ -36,6 +36,12 @@ export default tseslint.config(
         "warn",
         { prefer: "type-imports", fixStyle: "separate-type-imports" },
       ],
+      "@typescript-eslint/no-empty-object-type": [
+        "error",
+        {
+          allowInterfaces: "with-single-extends",
+        },
+      ],
     },
   },
   {
