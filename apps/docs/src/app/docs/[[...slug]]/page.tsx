@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
+import { DocsBody, DocsDescription, DocsPage, DocsTitle } from "@/components/layout/page";
 import { getPageImage, source } from "@/lib/source";
 import { getMDXComponents } from "@/mdx-components";
 import { getGithubLastEdit } from "fumadocs-core/content/github";
 import { createRelativeLink } from "fumadocs-ui/mdx";
-import { DocsBody, DocsDescription, DocsPage, DocsTitle } from "fumadocs-ui/page";
 import { notFound } from "next/navigation";
 
 function removeFileExtension(slug: string[]) {
@@ -30,18 +30,16 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
       toc={page.data.toc}
       full={page.data.full}
       lastUpdate={time ? new Date(time) : undefined}
+      editOnGithub={{
+        owner: "nickdutto",
+        repo: "react-gis",
+        path: `apps/docs/content/docs/${page.path}`,
+        sha: "main",
+      }}
     >
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
-        <a
-          href={`https://github.com/nickdutto/react-gis/blob/main/apps/docs/content/docs/${page.path}`}
-          rel="noreferrer noopener"
-          target="_blank"
-          className="text-fd-secondary-foreground bg-fd-secondary hover:text-fd-accent-foreground hover:bg-fd-accent w-fit rounded-xl border p-2 text-sm font-medium transition-colors"
-        >
-          Edit on GitHub
-        </a>
         <MDX
           components={getMDXComponents({
             // this allows you to link to other pages with relative file paths
