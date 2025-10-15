@@ -1,5 +1,11 @@
 # @react-gis/openlayers
 
+## 1.0.4
+
+### Patch Changes
+
+- 6e093e6: Improve/add exported types and set package license correctly to MIT
+
 ## 1.0.3
 
 ### Patch Changes
