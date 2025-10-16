@@ -1,0 +1,39 @@
+---
+title: Custom Control Component
+---
+
+<Callout type="warn">Work in progress, subject to change.</Callout>
+
+<Callout type="info">
+  Control must extend
+  [ol/control/Control](https://openlayers.org/en/latest/apidoc/module-ol_control_Control-Control.html)
+  from OpenLayers to use this functionality.
+</Callout>
+
+The generic [useControl](../API-Reference/openlayers/control/use-control.mdx) is used to construct React components for controls.
+
+Below is an example of how we use it to create the [ZoomControl](../API-Reference/openlayers/control/zoom-control.mdx), you can adapt it to your own Control.
+
+#### Example
+
+```tsx title="zoom-control.tsx"
+import type { Options as OlZoomOptions } from "ol/control/Zoom";
+
+import Zoom from "ol/control/Zoom";
+
+import type { ControlOptions } from "./use-control";
+
+import { useControl } from "./use-control";
+
+export interface ZoomControlProps extends ControlOptions<OlZoomOptions> {} // [!code highlight]
+
+export const ZoomControl = (props: ZoomControlProps) => {
+  useControl<Zoom, ZoomControlProps>(Zoom, props); // [!code highlight]
+
+  return null;
+};
+```
+
+If you want correct type hints in your editor for `props` on `useControl` inferred from your `Control` you need to pass the generic types.
+This is only required if you want to modify the `props` argument within the `useControl` invoke.
+In the example they aren't required but are provided for verbosity/showcase.

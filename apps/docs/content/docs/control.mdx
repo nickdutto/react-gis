@@ -1,0 +1,86 @@
+---
+title: Controls
+---
+
+## Using Controls
+
+<Callout type="info">
+  All Controls currently in OpenLayers `10.6.0` are available as React components.
+</Callout>
+
+### React Components
+
+Adding Controls to the `Map` with React components, see [Available Controls](control.mdx#available-controls) for all controls.
+
+```tsx title="app.tsx"
+import OlTileLayer from "ol/layer/Tile";
+import { OSM } from "ol/source";
+
+import { OverviewMapControl, RotateControl } from "@react-gis/openlayers/control";
+import { TileLayer } from "@react-gis/openlayers/layer";
+import { Map } from "@react-gis/openlayers/map";
+
+const App = () => (
+  <Map
+    mapOptions={{
+      // set to an empty array to remove default controls
+      controls: [], // [!code highlight]
+      view: { center: [134, -28], zoom: 4 },
+    }}
+    style={{ height: "100%", width: "100%" }}
+  >
+    {/* [!code highlight] */}
+    <RotateControl autoHide={false} />
+
+    {/* [!code highlight] */}
+    <OverviewMapControl layers={[new OlTileLayer({ source: new OSM() })]} />
+
+    <TileLayer name="osm" source={new OSM()} />
+  </Map>
+);
+```
+
+### MapOptions
+
+You can fallback to the standard OpenLayers way and add Controls directly to [MapOptions](API-Reference/openlayers/map/map-options.mdx#mapoptions) `controls`
+on the [Map](API-Reference/openlayers/map/map.mdx) component if you'd like instead.
+
+```tsx title="app.tsx"
+import { defaults as defaultControls } from "ol/control/defaults";
+import FullScreen from "ol/control/FullScreen";
+import { OSM } from "ol/source";
+
+import { TileLayer } from "@react-gis/openlayers/layer";
+import { Map } from "@react-gis/openlayers/map";
+
+const App = () => (
+  <Map
+    mapOptions={{
+      controls: defaultControls().extend([new FullScreen()]), // [!code highlight]
+      view: { center: [134, -28], zoom: 4 },
+    }}
+    style={{ height: "100%", width: "100%" }}
+  >
+    <TileLayer name="osm" source={new OSM()} />
+  </Map>
+);
+```
+
+## Available Controls
+
+- [AttributionControl](API-Reference/openlayers/control/attribution-control.mdx)
+- [FullScreenControl](API-Reference/openlayers/control/full-screen-control.mdx)
+- [MousePositionControl](API-Reference/openlayers/control/mouse-position-control.mdx)
+- [OverviewMapControl](API-Reference/openlayers/control/overview-map-control.mdx)
+- [RotateControl](API-Reference/openlayers/control/rotate-control.mdx)
+- [ScaleLineControl](API-Reference/openlayers/control/scale-line-control.mdx)
+- [ZoomControl](API-Reference/openlayers/control/zoom-control.mdx)
+- [ZoomSliderControl](API-Reference/openlayers/control/zoom-slider-control.mdx)
+- [ZoomToExtentControl](API-Reference/openlayers/control/zoom-to-extent-control.mdx)
+
+## Useful Links
+
+#### OpenLayers Documentation
+
+- [ol/control/Control](https://openlayers.org/en/latest/apidoc/module-ol_control_Control-Control.html)
+- [ol/control/defaults](https://openlayers.org/en/latest/apidoc/module-ol_control_defaults#.defaults)
