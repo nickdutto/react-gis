@@ -1,0 +1,88 @@
+---
+title: Layers
+---
+
+import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
+
+<Callout type="info">
+  Not all layers from OpenLayers have been added as React components yet, more will be added with
+  future updates.
+  <></>
+  If you need to use a missing or custom layer either add it to `MapOptions` or read [Custom
+  Layer](../layer/custom.mdx) to setup your own layer component in the meantime!
+</Callout>
+
+## Using Layers
+
+There are two different ways you can use layers, you can use both at the same time if required:
+
+1. React components provided by ReactGIS.
+2. Standard OpenLayers way.
+
+<Accordions type="single">
+  <Accordion title="Unique name properties">
+    Avoid duplicate unique `name` properties on different layers as future features (e.g. layer
+    control/switch components) will utilize it as a unique identifier for the layer.
+  </Accordion>
+</Accordions>
+### React Components
+
+Below is how you add layers to the `Map` with React components, see [Available Layers](../layer/index.mdx#available-layers) for all layers.
+
+Layers require a `name` and `source`. Other options from the underlying OpenLayers layer type are available, refer to the API Reference for the specific layer component.
+
+```tsx title="app.tsx"
+import { OSM } from "ol/source";
+import VectorSource from "ol/source/Vector";
+import Style from "ol/style/Style";
+
+import { TileLayer, VectorLayer } from "@react-gis/openlayers/layer";
+import { Map } from "@react-gis/openlayers/map";
+
+const App = () => (
+  <Map
+    mapOptions={{
+      view: { center: [134, -28], zoom: 4 },
+    }}
+    style={{ height: "100%", width: "100%" }}
+  >
+    {/* [!code highlight] */}
+    <TileLayer name="osm" source={new OSM()} />
+
+    {/* [!code highlight] */}
+    <VectorLayer name="markers" source={new VectorSource({})} style={new Style({})} />
+  </Map>
+);
+```
+
+### MapOptions
+
+You can fallback to the standard OpenLayers way and add layers directly to [MapOptions](API-Reference/openlayers/map/map-options.mdx#mapoptions) if required.
+
+```tsx title="app.tsx"
+import OlTileLayer from "ol/layer/Tile";
+import { OSM } from "ol/source";
+
+import { Map } from "@react-gis/openlayers/map";
+
+const App = () => (
+  <Map
+    mapOptions={{
+      layers: [new OlTileLayer({ source: new OSM() })], // [!code highlight]
+      view: { center: [134, -28], zoom: 4 },
+    }}
+    style={{ height: "100%", width: "100%" }}
+  />
+);
+```
+
+## Available Layers
+
+- [HeatmapLayer](API-Reference/openlayers/layer/heatmap-layer.mdx)
+- [ImageLayer](API-Reference/openlayers/layer/image-layer.mdx)
+- [TileLayer](API-Reference/openlayers/layer/tile-layer.mdx)
+- [VectorLayer](API-Reference/openlayers/layer/vector-layer.mdx)
+
+## Useful Links
+
+- [OpenLayers API Documentation](https://openlayers.org/en/latest/apidoc/) relevant sections under `ol/layer` and `ol/source`.

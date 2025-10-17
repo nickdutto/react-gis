@@ -1,3 +1,9 @@
 {
-  "pages": ["...(introduction)", "...control", "---[CodeXml] API Reference---", "...API-Reference"]
+  "pages": [
+    "...(introduction)",
+    "...layer",
+    "...control",
+    "---[CodeXml] API Reference---",
+    "...API-Reference"
+  ]
 }

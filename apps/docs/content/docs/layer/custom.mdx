@@ -1,0 +1,56 @@
+---
+title: Custom Layer
+---
+
+<Callout type="warn">Work in progress, subject to change.</Callout>
+
+<Callout type="info">
+  Layer must extend
+  [ol/layer/Base](https://openlayers.org/en/latest/apidoc/module-ol_layer_Base-BaseLayer.html) from
+  OpenLayers to use this functionality.
+</Callout>
+
+The generic [`useLayer`](../API-Reference/openlayers/layer/use-layer.mdx) hook
+is used to construct React components for layers.
+
+Below is an example of how we use it to create the
+[`TileLayer`](../API-Reference/openlayers/layer/tile-layer.mdx)
+with extra code to show how to setup types properly if the layers options require an extra generic type.
+You can adapt it to your own layer.
+
+#### Example
+
+```tsx title="custom-layer.tsx"
+import type { Options as BaseImageOptions } from "ol/layer/BaseImage";
+import type { Options as BaseTileLayerOptions } from "ol/layer/BaseTile";
+import type ImageSource from "ol/source/Image";
+import type TileSource from "ol/source/Tile";
+
+import OlImageLayer from "ol/layer/Image";
+import OlTileLayer from "ol/layer/Tile";
+
+import type { LayerOptions } from "./use-layer";
+
+import { useLayer } from "./use-layer";
+
+export interface TileLayerProps extends LayerOptions<BaseTileLayerOptions<TileSource>> {} // [!code highlight]
+// OR
+// [!code highlight]
+// if the OpenLayers layer options requires a generic
+export interface ImageLayerProps extends LayerOptions<BaseImageOptions<ImageSource>> {} // [!code highlight]
+
+export const CustomLayer = (props: TileLayerProps) => {
+  useLayer<OlTileLayer, TileLayerProps>(OlTileLayer, props); // [!code highlight]
+  // OR
+  // [!code highlight]
+  // if the OpenLayers layer options requires a generic
+  useLayer<OlImageLayer<ImageSource>, ImageLayerProps>(OlImageLayer, props); // [!code highlight]
+
+  return null;
+};
+```
+
+If you want correct type hints in your editor for the `props` argument on the `useLayer` hook invoke
+for your specific layer you need to pass the generic types.
+This is only required if you want to modify the `props` argument within the `useLayer` invoke.
+In the example they aren't required but are provided for verbosity/showcase.
