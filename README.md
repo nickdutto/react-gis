@@ -1,9 +1,14 @@
+[![GitHub Actions Workflow - Release Status](https://img.shields.io/github/actions/workflow/status/nickdutto/react-gis/release.yml?logo=github)](https://github.com/nickdutto/react-gis)
+[![GitHub License](https://img.shields.io/github/license/nickdutto/react-gis)](https://github.com/nickdutto/react-gis/blob/main/LICENSE)
+[![NPM Version](https://img.shields.io/npm/v/%40react-gis%2Fopenlayers)](https://www.npmjs.com/package/@react-gis/openlayers)
+[![GitHub Repo stars](https://img.shields.io/github/stars/nickdutto/react-gis)](https://github.com/nickdutto/react-gis)
+
 # ReactGIS
 
 React wrapper for OpenLayers.
 
-- [Documentation](https://reactgis.nickdutto.dev/docs)
-- [Storybook](https://reactgis-storybook.nickdutto.dev)
+[![Documentation](https://img.shields.io/badge/-Documentation-%23050505?style=for-the-badge&logo=readthedocs&logoColor=%2373e600)](https://reactgis.nickdutto.dev/docs)
+[![Storybook](https://img.shields.io/badge/-Storybook-%23050505?style=for-the-badge&logo=storybook)](https://reactgis-storybook.nickdutto.dev)
 
 ## Getting Started
 
