@@ -18,3 +18,6 @@ export type { VectorImageLayerProps } from "./vector-image-layer";
 
 export { VectorLayer } from "./vector-layer";
 export type { VectorLayerProps } from "./vector-layer";
+
+export { VectorTileLayer } from "./vector-tile-layer";
+export type { VectorTileLayerProps } from "./vector-tile-layer";
