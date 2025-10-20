@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.link {
+  background-color: #101b04;
+  border-radius: 6px;
+  border-width: 0;
+  color: #73e600;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: sans-serif;
+  padding: 8px 10px;
+  text-align: center;
+  transition: all 200ms;
+  text-decoration: none;
+  white-space: nowrap;
+}
