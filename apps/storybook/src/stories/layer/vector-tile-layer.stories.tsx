@@ -1,16 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import type { TypeWithDeepControls } from "storybook-addon-deep-controls";
 
-import { ImageWMS, OSM } from "ol/source";
+import MVT from "ol/format/MVT";
+import VectorTileSource from "ol/source/VectorTile";
 
-import { ImageLayer, TileLayer } from "@react-gis/openlayers/layer";
+import { VectorTileLayer } from "@react-gis/openlayers/layer";
 import { Map as CoreMap } from "@react-gis/openlayers/map";
 
 import { ExternalLinks } from "~/helpers/external-links";
 
 const meta = {
-  title: "Layer/ImageLayer",
-  component: ImageLayer,
+  title: "Layer/VectorTileLayer",
+  component: VectorTileLayer,
   parameters: {
     layout: "fullscreen",
     deepControls: {
@@ -23,6 +24,10 @@ const meta = {
     },
   },
   argTypes: {
+    renderMode: {
+      control: "inline-radio",
+      options: ["hybrid", "vector"],
+    },
     minZoom: {
       type: "number",
     },
@@ -39,7 +44,7 @@ const meta = {
       type: "number",
     },
   },
-} satisfies TypeWithDeepControls<Meta<typeof ImageLayer>>;
+} satisfies TypeWithDeepControls<Meta<typeof VectorTileLayer>>;
 
 export default meta;
 
@@ -47,28 +52,25 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    name: "us-states",
+    name: "world-base-map",
     visible: true,
     opacity: 1,
-    extent: [-13884991, 2870341, -7455066, 6338219],
+    renderMode: "hybrid",
+    declutter: false,
+    renderBuffer: 100,
+    preload: 0,
+    updateWhileInteracting: false,
   },
   render: (props) => {
     return (
       <>
-        <CoreMap
-          mapOptions={{ view: { center: [-96, 36], zoom: 3.5 } }}
-          style={{ height: "100%", width: "100%" }}
-        >
-          <TileLayer name="osm" source={new OSM()} />
-
-          <ImageLayer
+        <CoreMap style={{ height: "100%", width: "100%" }}>
+          <VectorTileLayer
             {...props}
             source={
-              new ImageWMS({
-                url: "https://ahocevar.com/geoserver/wms",
-                params: { LAYERS: "topp:states" },
-                ratio: 1,
-                serverType: "geoserver",
+              new VectorTileSource({
+                format: new MVT(),
+                url: "https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer/tile/{z}/{y}/{x}.pbf",
               })
             }
           />
@@ -78,11 +80,11 @@ export const Default: Story = {
           links={[
             {
               title: "ReactGIS Docs",
-              href: "https://reactgis.nickdutto.dev/docs/API-Reference/openlayers/layer/image-layer",
+              href: "https://reactgis.nickdutto.dev/docs/API-Reference/openlayers/layer/vector-tile-layer",
             },
             {
               title: "OpenLayers Docs",
-              href: "https://openlayers.org/en/latest/apidoc/module-ol_layer_Image-ImageLayer.html",
+              href: "https://openlayers.org/en/latest/apidoc/module-ol_layer_VectorTile.html",
             },
           ]}
         />

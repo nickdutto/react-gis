@@ -1,10 +1,12 @@
 import type { ThemeVars } from "storybook/theming";
 
+import "./storybook.css";
+
 export const theme: ThemeVars = {
   base: "dark",
   // Storybook-specific color palette
-  colorPrimary: "#0681e0",
-  colorSecondary: "#0681e0",
+  colorPrimary: "#73e600",
+  colorSecondary: "#73e600",
   // UI
   appBg: "#131316",
   appContentBg: "#101012",
@@ -41,8 +43,8 @@ export const theme: ThemeVars = {
   textMutedColor: "#71717a",
   // Toolbar default and active colors
   barTextColor: "#71717a",
-  barHoverColor: "#0095ff",
-  barSelectedColor: "#0095ff",
+  barHoverColor: "#73e600",
+  barSelectedColor: "#73e600",
   barBg: "#131316",
   // Form colors
   buttonBg: "#18181B",
@@ -53,5 +55,5 @@ export const theme: ThemeVars = {
   inputBorder: "#222226",
   inputTextColor: "#d4d4d8",
   inputBorderRadius: 4,
-  brandTitle: "React GIS OpenLayers",
+  brandTitle: "ReactGIS",
 };

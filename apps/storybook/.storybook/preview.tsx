@@ -1,4 +1,3 @@
-import "./storybook.css";
 import "ol/ol.css";
 
 import type { Preview } from "@storybook/react-vite";
