@@ -6,6 +6,15 @@
   border-left: solid 2px #2a2a2a !important;
 }
 
+div.sidebar-item[data-selected="true"],
+div.sidebar-item[data-selected="true"] svg,
+div.sidebar-item:hover,
+div.sidebar-item:hover > div > button {
+  color: #73e600;
+  background: #101b04 !important;
+  box-shadow: none;
+}
+
 html,
 body.sb-main-fullscreen,
 body.sb-main-fullscreen #storybook-root {
