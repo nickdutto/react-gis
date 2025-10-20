@@ -47,6 +47,7 @@
     "./packages/openlayers/src/layer/image-layer.tsx",
     "./packages/openlayers/src/layer/tile-layer.tsx",
     "./packages/openlayers/src/layer/use-layer.ts",
+    "./packages/openlayers/src/layer/vector-image-layer.tsx",
     "./packages/openlayers/src/layer/vector-layer.tsx",
     "./packages/openlayers/src/map/map-context.ts",
     "./packages/openlayers/src/map/map-options.ts",
