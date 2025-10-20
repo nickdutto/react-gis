@@ -42,6 +42,7 @@
     "./packages/openlayers/src/control/zoom-control.tsx",
     "./packages/openlayers/src/control/zoom-slider-control.tsx",
     "./packages/openlayers/src/control/zoom-to-extent-control.tsx",
+    "./packages/openlayers/src/layer/graticule-layer.tsx",
     "./packages/openlayers/src/layer/heatmap-layer.tsx",
     "./packages/openlayers/src/layer/image-layer.tsx",
     "./packages/openlayers/src/layer/tile-layer.tsx",
