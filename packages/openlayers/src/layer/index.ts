@@ -21,3 +21,6 @@ export type { VectorLayerProps } from "./vector-layer";
 
 export { VectorTileLayer } from "./vector-tile-layer";
 export type { VectorTileLayerProps } from "./vector-tile-layer";
+
+export { WebGLTileLayer } from "./webgl-tile-layer";
+export type { WebGLTileLayerProps } from "./webgl-tile-layer";
