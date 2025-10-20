@@ -13,5 +13,8 @@ export type { TileLayerProps } from "./tile-layer";
 export { useLayer } from "./use-layer";
 export type { LayerOptions } from "./use-layer";
 
+export { VectorImageLayer } from "./vector-image-layer";
+export type { VectorImageLayerProps } from "./vector-image-layer";
+
 export { VectorLayer } from "./vector-layer";
 export type { VectorLayerProps } from "./vector-layer";
