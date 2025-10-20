@@ -5,11 +5,7 @@ title: Layers
 import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
 
 <Callout type="info">
-  Not all layers from OpenLayers have been added as React components yet, more will be added with
-  future updates.
-  <></>
-  If you need to use a missing or custom layer either add it to `MapOptions` or read [Custom
-  Layer](../layer/custom.mdx) to setup your own layer component in the meantime!
+  All Layers currently in OpenLayers `10.6.0` are available as React components. (minus `Group`)
 </Callout>
 
 ## Using Layers
@@ -78,10 +74,14 @@ const App = () => (
 
 ## Available Layers
 
-- [HeatmapLayer](API-Reference/openlayers/layer/heatmap-layer.mdx)
-- [ImageLayer](API-Reference/openlayers/layer/image-layer.mdx)
-- [TileLayer](API-Reference/openlayers/layer/tile-layer.mdx)
-- [VectorLayer](API-Reference/openlayers/layer/vector-layer.mdx)
+- [GraticuleLayer](../API-Reference/openlayers/layer/graticule-layer.mdx)
+- [HeatmapLayer](../API-Reference/openlayers/layer/heatmap-layer.mdx)
+- [ImageLayer](../API-Reference/openlayers/layer/image-layer.mdx)
+- [TileLayer](../API-Reference/openlayers/layer/tile-layer.mdx)
+- [VectorImageLayer](../API-Reference/openlayers/layer/vector-image-layer.mdx)
+- [VectorLayer](../API-Reference/openlayers/layer/vector-layer.mdx)
+- [VectorTileLayer](../API-Reference/openlayers/layer/vector-tile-layer.mdx)
+- [WebGLTileLayer](../API-Reference/openlayers/layer/webgl-tile-layer.mdx)
 
 ## Useful Links
 
