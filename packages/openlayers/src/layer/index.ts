@@ -1,3 +1,6 @@
+export { GraticuleLayer } from "./graticule-layer";
+export type { GraticuleLayerProps } from "./graticule-layer";
+
 export { HeatmapLayer } from "./heatmap-layer";
 export type { HeatmapLayerProps } from "./heatmap-layer";
 
