@@ -13,10 +13,11 @@ import Style from "ol/style/Style";
 import { TileLayer, VectorLayer } from "@react-gis/openlayers/layer";
 import { Map as CoreMap } from "@react-gis/openlayers/map";
 
+import { ExternalLinks } from "~/helpers/external-links";
+
 const meta = {
   title: "Layer/VectorLayer",
-  component: CoreMap,
-  tags: ["autodocs"],
+  component: VectorLayer,
   parameters: {
     layout: "fullscreen",
     deepControls: {
@@ -29,13 +30,23 @@ const meta = {
     },
   },
   argTypes: {
-    "mapOptions.layers": {
-      table: {
-        disable: true,
-      },
+    minZoom: {
+      type: "number",
+    },
+    maxZoom: {
+      type: "number",
+    },
+    minResolution: {
+      type: "number",
+    },
+    maxResolution: {
+      type: "number",
+    },
+    zIndex: {
+      type: "number",
     },
   },
-} satisfies TypeWithDeepControls<Meta<typeof CoreMap>>;
+} satisfies TypeWithDeepControls<Meta<typeof VectorLayer>>;
 
 export default meta;
 
@@ -43,50 +54,66 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    mapOptions: {
-      view: {
-        center: [134, -28],
-        zoom: 5,
-      },
-    },
+    name: "markers",
+    visible: true,
+    opacity: 1,
+    declutter: false,
+    renderBuffer: 100,
+    updateWhileAnimating: false,
+    updateWhileInteracting: false,
   },
   render: (props) => {
     return (
-      <CoreMap {...props} style={{ height: "100%", width: "100%" }}>
-        <TileLayer name="osm" source={new OSM()} />
+      <>
+        <CoreMap style={{ height: "100%", width: "100%" }}>
+          <TileLayer name="osm" source={new OSM()} />
 
-        <VectorLayer
-          name="markers"
-          source={
-            new VectorSource({
-              features: [
-                new Feature({
-                  geometry: new Point(fromLonLat([134, -28])),
+          <VectorLayer
+            {...props}
+            source={
+              new VectorSource({
+                features: [
+                  new Feature({
+                    geometry: new Point(fromLonLat([134, -28])),
+                  }),
+                  new Feature({
+                    geometry: new Point(fromLonLat([136, -28])),
+                  }),
+                  new Feature({
+                    geometry: new Point(fromLonLat([138, -28])),
+                  }),
+                  new Feature({
+                    geometry: new Point(fromLonLat([134, -30])),
+                  }),
+                ],
+              })
+            }
+            style={
+              new Style({
+                image: new Circle({
+                  radius: 14,
+                  fill: new Fill({
+                    color: "orange",
+                  }),
                 }),
-                new Feature({
-                  geometry: new Point(fromLonLat([136, -28])),
-                }),
-                new Feature({
-                  geometry: new Point(fromLonLat([138, -28])),
-                }),
-                new Feature({
-                  geometry: new Point(fromLonLat([134, -30])),
-                }),
-              ],
-            })
-          }
-          style={
-            new Style({
-              image: new Circle({
-                radius: 14,
-                fill: new Fill({
-                  color: "orange",
-                }),
-              }),
-            })
-          }
+              })
+            }
+          />
+        </CoreMap>
+
+        <ExternalLinks
+          links={[
+            {
+              title: "ReactGIS Docs",
+              href: "https://reactgis.nickdutto.dev/docs/API-Reference/openlayers/layer/vector-layer",
+            },
+            {
+              title: "OpenLayers Docs",
+              href: "https://openlayers.org/en/latest/apidoc/module-ol_layer_Vector-VectorLayer.html",
+            },
+          ]}
         />
-      </CoreMap>
+      </>
     );
   },
 };
