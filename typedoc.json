@@ -50,6 +50,7 @@
     "./packages/openlayers/src/layer/vector-image-layer.tsx",
     "./packages/openlayers/src/layer/vector-layer.tsx",
     "./packages/openlayers/src/layer/vector-tile-layer.tsx",
+    "./packages/openlayers/src/layer/webgl-tile-layer.tsx",
     "./packages/openlayers/src/map/map-context.ts",
     "./packages/openlayers/src/map/map-options.ts",
     "./packages/openlayers/src/map/map-provider.tsx",
