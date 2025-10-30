@@ -9,7 +9,6 @@ import { Map as CoreMap } from "@react-gis/openlayers/map";
 const meta = {
   title: "Map",
   component: CoreMap,
-  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
     deepControls: {

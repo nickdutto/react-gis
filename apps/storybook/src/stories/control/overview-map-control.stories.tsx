@@ -12,7 +12,6 @@ import { Map as CoreMap } from "@react-gis/openlayers/map";
 const meta = {
   title: "Control/OverviewMapControl",
   component: OverviewMapControl,
-  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
     deepControls: {

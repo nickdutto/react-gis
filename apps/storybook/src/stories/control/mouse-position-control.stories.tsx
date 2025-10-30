@@ -13,7 +13,6 @@ import { Map as CoreMap } from "@react-gis/openlayers/map";
 const meta = {
   title: "Control/MousePositionControl",
   component: MousePositionControl,
-  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
     deepControls: {
