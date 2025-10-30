@@ -54,10 +54,10 @@
     "@react-gis/eslint": "workspace:*",
     "@react-gis/typescript": "workspace:*",
     "@types/react": "19.2.2",
-    "@types/react-dom": "19.2.1",
-    "@vitejs/plugin-react": "5.0.4",
+    "@types/react-dom": "19.2.2",
+    "@vitejs/plugin-react": "5.1.0",
     "typescript": "5.9.3",
-    "vite": "7.1.9"
+    "vite": "7.1.12"
   },
   "peerDependencies": {
     "ol": "^10.6.0",
