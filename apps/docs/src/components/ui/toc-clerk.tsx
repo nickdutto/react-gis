@@ -90,7 +90,7 @@ export default function ClerkTOCItems({ ref, className, ...props }: ComponentPro
         >
           <TocThumb
             containerRef={containerRef}
-            className="mt-(--fd-top) h-(--fd-height) bg-fd-primary transition-all"
+            className="bg-fd-primary mt-(--fd-top) h-(--fd-height) transition-all"
           />
         </div>
       ) : null}
@@ -137,13 +137,13 @@ function TOCItem({
       style={{
         paddingInlineStart: getItemOffset(item.depth),
       }}
-      className="prose text-fd-muted-foreground hover:text-fd-accent-foreground data-[active=true]:text-fd-primary relative py-1.5 text-sm transition-colors [overflow-wrap:anywhere] first:pt-0 last:pb-0"
+      className="prose text-fd-muted-foreground hover:text-fd-accent-foreground data-[active=true]:text-fd-primary relative py-1.5 text-sm [overflow-wrap:anywhere] transition-colors first:pt-0 last:pb-0"
     >
       {offset !== upperOffset ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
-          className="absolute -top-1.5 start-0 size-4 rtl:-scale-x-100"
+          className="absolute start-0 -top-1.5 size-4 rtl:-scale-x-100"
         >
           <line
             x1={upperOffset}

@@ -40,7 +40,7 @@ export function Navbar(props: ComponentProps<"div">) {
         id="nd-nav"
         {...props}
         className={cn(
-          "top-(--fd-banner-height) right-(--removed-body-scroll-bar-size,0) *:max-w-fd-container fixed left-0 z-40 border-b backdrop-blur-lg transition-colors *:mx-auto",
+          "*:max-w-fd-container fixed top-(--fd-banner-height) right-(--removed-body-scroll-bar-size,0) left-0 z-40 border-b backdrop-blur-lg transition-colors *:mx-auto",
           value.length > 0 && "max-lg:rounded-b-2xl max-lg:shadow-lg",
           (!isTransparent || value.length > 0) && "bg-fd-background/80",
           props.className,

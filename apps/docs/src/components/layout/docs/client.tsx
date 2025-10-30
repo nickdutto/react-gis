@@ -24,7 +24,7 @@ export function Navbar({ mode, ...props }: ComponentProps<"header"> & { mode: "t
       id="nd-subnav"
       {...props}
       className={cn(
-        "top-(--fd-banner-height) right-(--removed-body-scroll-bar-size,0) px-(--fd-layout-offset) h-(--fd-nav-height) fixed left-0 z-10 flex flex-col backdrop-blur-sm transition-colors",
+        "fixed top-(--fd-banner-height) right-(--removed-body-scroll-bar-size,0) left-0 z-10 flex h-(--fd-nav-height) flex-col px-(--fd-layout-offset) backdrop-blur-sm transition-colors",
         (!isTransparent || open) && "bg-fd-background/80",
         mode === "auto" &&
           !collapsed &&
@@ -45,7 +45,7 @@ export function LayoutBody(props: ComponentProps<"main">) {
       id="nd-docs-layout"
       {...props}
       className={cn(
-        "pt-(--fd-nav-height) fd-notebook-layout flex flex-1 flex-col transition-[padding]",
+        "fd-notebook-layout flex flex-1 flex-col pt-(--fd-nav-height) transition-[padding]",
         !collapsed && "mx-(--fd-layout-offset)",
         props.className,
       )}
@@ -113,7 +113,7 @@ function LayoutTab({
       href={url}
       {...props}
       className={cn(
-        "text-fd-muted-foreground hover:text-fd-accent-foreground inline-flex items-center gap-2 text-nowrap border-b-2 border-transparent pb-1.5 text-sm font-medium transition-colors",
+        "text-fd-muted-foreground hover:text-fd-accent-foreground inline-flex items-center gap-2 border-b-2 border-transparent pb-1.5 text-sm font-medium text-nowrap transition-colors",
         unlisted && !selected && "hidden",
         selected && "border-fd-primary text-fd-primary",
         props?.className,

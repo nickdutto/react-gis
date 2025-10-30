@@ -135,7 +135,7 @@ export function DocsLayout(props: DocsLayoutProps) {
               buttonVariants({
                 color: "ghost",
                 size: "icon-sm",
-                className: "text-fd-muted-foreground mb-auto mt-px",
+                className: "text-fd-muted-foreground mt-px mb-auto",
               }),
             )}
           >
@@ -239,7 +239,7 @@ export function DocsLayout(props: DocsLayoutProps) {
           ))}
           {i18n ? (
             <LanguageToggle>
-              <Languages className="size-4.5 text-fd-muted-foreground" />
+              <Languages className="text-fd-muted-foreground size-4.5" />
             </LanguageToggle>
           ) : null}
           {themeSwitch.enabled !== false &&
@@ -393,7 +393,7 @@ function DocsNavbar({
           <div className="flex items-center gap-2 max-md:hidden">
             {props.i18n ? (
               <LanguageToggle>
-                <Languages className="size-4.5 text-fd-muted-foreground" />
+                <Languages className="text-fd-muted-foreground size-4.5" />
               </LanguageToggle>
             ) : null}
             {themeSwitch.enabled !== false &&
