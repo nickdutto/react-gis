@@ -1,5 +1,13 @@
 # @react-gis/storybook
 
+## 0.1.6
+
+### Patch Changes
+
+- de0ce6c: Upgrade dependencies/devDependencies across repo #11
+- Updated dependencies [de0ce6c]
+  - @react-gis/openlayers@1.1.1
+
 ## 0.1.5
 
 ### Patch Changes
