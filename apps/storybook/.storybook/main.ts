@@ -1,6 +1,9 @@
 import type { StorybookConfig } from "@storybook/react-vite";
 
+import { createRequire } from "node:module";
 import { dirname, join } from "path";
+
+const require = createRequire(import.meta.url);
 
 /**
  * Resolve the absolute path of a package within a monorepo

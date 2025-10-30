@@ -1,0 +1,4 @@
+{
+  "extends": "@react-gis/typescript/node.json",
+  "include": ["vitest.config.ts"]
+}

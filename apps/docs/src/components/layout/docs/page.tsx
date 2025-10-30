@@ -80,7 +80,7 @@ export function PageRoot({ toc = false, children, ...props }: RootProps) {
       id="nd-page"
       {...props}
       className={cn(
-        "max-w-(--fd-page-width) pt-(--fd-tocnav-height) pe-(--fd-toc-width) mx-auto flex w-full flex-1",
+        "mx-auto flex w-full max-w-(--fd-page-width) flex-1 pe-(--fd-toc-width) pt-(--fd-tocnav-height)",
         props.className,
       )}
     >

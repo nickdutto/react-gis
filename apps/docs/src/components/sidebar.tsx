@@ -112,9 +112,9 @@ export function SidebarContent(props: ComponentProps<"aside">) {
       {...props}
       data-collapsed={collapsed}
       className={cn(
-        "rtl:right-(--removed-body-scroll-bar-size,0) top-(--fd-sidebar-top) bottom-(--fd-sidebar-margin) bg-fd-card *:w-(--fd-sidebar-width) fixed left-0 z-20 flex flex-col items-end border-e text-sm transition-[top,opacity,translate,width] duration-200 max-md:hidden rtl:left-auto",
+        "bg-fd-card fixed top-(--fd-sidebar-top) bottom-(--fd-sidebar-margin) left-0 z-20 flex flex-col items-end border-e text-sm transition-[top,opacity,translate,width] duration-200 *:w-(--fd-sidebar-width) max-md:hidden rtl:right-(--removed-body-scroll-bar-size,0) rtl:left-auto",
         collapsed && [
-          "translate-x-(--fd-sidebar-offset) rtl:-translate-x-(--fd-sidebar-offset) rounded-xl border",
+          "translate-x-(--fd-sidebar-offset) rounded-xl border rtl:-translate-x-(--fd-sidebar-offset)",
           hover ? "z-50 shadow-lg" : "opacity-0",
         ],
         props.className,
@@ -162,7 +162,7 @@ export function SidebarContentMobile({ className, children, ...props }: Componen
       <Presence present={open}>
         <div
           data-state={state}
-          className="backdrop-blur-xs data-[state=open]:animate-fd-fade-in data-[state=closed]:animate-fd-fade-out fixed inset-0 z-40"
+          className="data-[state=open]:animate-fd-fade-in data-[state=closed]:animate-fd-fade-out fixed inset-0 z-40 backdrop-blur-xs"
           onClick={() => setOpen(false)}
         />
       </Presence>
@@ -226,7 +226,7 @@ export function SidebarSeparator(props: ComponentProps<"p">) {
     <p
       {...props}
       className={cn(
-        "ps-(--sidebar-item-offset) mb-1.5 inline-flex items-center gap-2 px-2 empty:mb-0 [&_svg]:size-4 [&_svg]:shrink-0",
+        "mb-1.5 inline-flex items-center gap-2 px-2 ps-(--sidebar-item-offset) empty:mb-0 [&_svg]:size-4 [&_svg]:shrink-0",
         props.className,
       )}
     >
@@ -338,7 +338,7 @@ export function SidebarFolderContent(props: CollapsibleContentProps) {
         "relative",
         level === 1 && [
           "before:bg-fd-border before:absolute before:inset-y-1 before:start-2.5 before:w-px before:content-['']",
-          "**:data-[active=true]:before:content-[''] **:data-[active=true]:before:bg-fd-primary **:data-[active=true]:before:absolute **:data-[active=true]:before:w-px **:data-[active=true]:before:inset-y-2.5 **:data-[active=true]:before:start-2.5",
+          "**:data-[active=true]:before:bg-fd-primary **:data-[active=true]:before:absolute **:data-[active=true]:before:inset-y-2.5 **:data-[active=true]:before:start-2.5 **:data-[active=true]:before:w-px **:data-[active=true]:before:content-['']",
         ],
         props.className,
       )}

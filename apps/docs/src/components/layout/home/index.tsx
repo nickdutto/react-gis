@@ -109,7 +109,7 @@ export function Header({
           ))}
         </div>
       </div>
-      <ul className="-me-1.5 ms-auto flex flex-row items-center md:hidden">
+      <ul className="ms-auto -me-1.5 flex flex-row items-center md:hidden">
         {searchToggle.enabled !== false &&
           (searchToggle.components?.sm ?? <SearchToggle className="p-2" hideIfDisabled />)}
         <Menu>

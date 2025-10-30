@@ -42,7 +42,7 @@ export function PageTOCPopoverTrigger(props: ComponentProps<"button">) {
     <CollapsibleTrigger
       {...props}
       className={cn(
-        "h-(--fd-tocnav-height) text-fd-muted-foreground flex w-full items-center gap-2.5 px-4 py-2.5 text-start text-sm focus-visible:outline-none md:px-6 [&_svg]:size-4",
+        "text-fd-muted-foreground flex h-(--fd-tocnav-height) w-full items-center gap-2.5 px-4 py-2.5 text-start text-sm focus-visible:outline-none md:px-6 [&_svg]:size-4",
         props.className,
       )}
     >
@@ -180,7 +180,7 @@ export function PageTOCPopover(props: ComponentProps<"div">) {
           id="nd-tocnav"
           {...props}
           className={cn(
-            "pr-(--removed-body-scroll-bar-size,0) max-xl:on-root:[--fd-tocnav-height:40px] fixed z-10 border-b backdrop-blur-sm transition-colors xl:hidden",
+            "max-xl:on-root:[--fd-tocnav-height:40px] fixed z-10 border-b pr-(--removed-body-scroll-bar-size,0) backdrop-blur-sm transition-colors xl:hidden",
             (!isTransparent || open) && "bg-fd-background/80",
             open && "shadow-lg",
             props.className,
@@ -299,7 +299,7 @@ function FooterItem({ item, index }: { item: Item; index: 0 | 1 }) {
     <Link
       href={item.url}
       className={cn(
-        "hover:bg-fd-accent/80 hover:text-fd-accent-foreground @max-lg:col-span-full flex flex-col gap-2 rounded-lg border p-4 text-sm transition-colors",
+        "hover:bg-fd-accent/80 hover:text-fd-accent-foreground flex flex-col gap-2 rounded-lg border p-4 text-sm transition-colors @max-lg:col-span-full",
         index === 1 && "text-end",
       )}
     >
@@ -376,7 +376,7 @@ export function PageTOC(props: ComponentProps<"div">) {
       id="nd-toc"
       {...props}
       className={cn(
-        "pr-(--removed-body-scroll-bar-size,0) fixed bottom-0 pb-2 pt-12 max-xl:hidden",
+        "fixed bottom-0 pt-12 pr-(--removed-body-scroll-bar-size,0) pb-2 max-xl:hidden",
         props.className,
       )}
       style={{
@@ -385,7 +385,7 @@ export function PageTOC(props: ComponentProps<"div">) {
         insetInlineEnd: `max(${offset}, calc(50vw - var(--fd-sidebar-width)/2 - var(--fd-page-width)/2))`,
       }}
     >
-      <div className="w-(--fd-toc-width) flex h-full max-w-full flex-col pe-4">
+      <div className="flex h-full w-(--fd-toc-width) max-w-full flex-col pe-4">
         {props.children}
       </div>
     </div>

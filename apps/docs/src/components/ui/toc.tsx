@@ -39,7 +39,7 @@ export function TOCScrollArea({ ref, className, ...props }: ComponentProps<"div"
     <div
       ref={mergeRefs(viewRef, ref)}
       className={cn(
-        "relative ms-px min-h-0 overflow-auto py-3 text-sm [mask-image:linear-gradient(to_bottom,transparent,white_16px,white_calc(100%-16px),transparent)] [scrollbar-width:none]",
+        "relative ms-px min-h-0 overflow-auto [mask-image:linear-gradient(to_bottom,transparent,white_16px,white_calc(100%-16px),transparent)] py-3 text-sm [scrollbar-width:none]",
         className,
       )}
       {...props}
@@ -65,7 +65,7 @@ export function TOCItems({ ref, className, ...props }: ComponentProps<"div">) {
     <>
       <TocThumb
         containerRef={containerRef}
-        className="top-(--fd-top) h-(--fd-height) bg-fd-primary absolute w-px transition-all"
+        className="bg-fd-primary absolute top-(--fd-top) h-(--fd-height) w-px transition-all"
       />
       <div
         ref={mergeRefs(ref, containerRef)}
@@ -85,7 +85,7 @@ function TOCItem({ item }: { item: Primitive.TOCItemType }) {
     <Primitive.TOCItem
       href={item.url}
       className={cn(
-        "prose text-fd-muted-foreground data-[active=true]:text-fd-primary py-1.5 text-sm transition-colors [overflow-wrap:anywhere] first:pt-0 last:pb-0",
+        "prose text-fd-muted-foreground data-[active=true]:text-fd-primary py-1.5 text-sm [overflow-wrap:anywhere] transition-colors first:pt-0 last:pb-0",
         item.depth <= 2 && "ps-3",
         item.depth === 3 && "ps-6",
         item.depth >= 4 && "ps-8",
