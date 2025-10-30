@@ -19,7 +19,6 @@ import { Map as CoreMap } from "@react-gis/openlayers/map";
 
 const meta = {
   title: "Control/AllControls",
-  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
     deepControls: {

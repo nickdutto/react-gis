@@ -11,7 +11,6 @@ import { Map as CoreMap } from "@react-gis/openlayers/map";
 const meta = {
   title: "Control/ZoomControl",
   component: ZoomControl,
-  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
     deepControls: {
