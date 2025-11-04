@@ -11,6 +11,7 @@
     ":semanticCommits",
     ":semanticCommitTypeAll(chore)"
   ],
+  "timezone": "Australia/Sydney",
   "labels": ["dependencies"],
   "postUpdateOptions": ["pnpmDedupe"],
   "packageRules": [
