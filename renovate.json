@@ -1,6 +1,23 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:recommended",
+    "group:allNonMajor",
+    "schedule:weekly",
+    ":approveMajorUpdates",
+    ":disablePeerDependencies",
+    ":maintainLockFilesWeekly",
+    ":pinAllExceptPeerDependencies",
+    ":semanticCommits",
+    ":semanticCommitTypeAll(chore)"
+  ],
+  "labels": ["dependencies"],
+  "postUpdateOptions": ["pnpmDedupe"],
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["^next$", "^@next/", "^fumadocs-"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "nextjs-fumadocs"
+    }
   ]
 }
