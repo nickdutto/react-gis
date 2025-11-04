@@ -52,5 +52,3 @@ function App() {
   );
 }
 ```
-
-test PR workflow playwright browser cache
