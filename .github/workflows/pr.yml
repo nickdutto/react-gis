@@ -40,10 +40,26 @@ jobs:
       - name: Install Dependencies
         shell: bash
         run: pnpm install --frozen-lockfile
-      - name: Install Playwright Browsers
+      - name: Get Playwright Version for Caching
+        id: playwright-version
+        run: |
+          PLAYWRIGHT_VERSION=$(grep '"playwright"' apps/storybook/package.json | awk -F ':' '{ print $2 }' | tr -d '",^~ ' | xargs)
+          echo "PLAYWRIGHT_VERSION=$PLAYWRIGHT_VERSION" >> $GITHUB_ENV
+          echo "Playwright Version: $PLAYWRIGHT_VERSION"
+      - name: Cache Playwright Binaries
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ env.PLAYWRIGHT_VERSION }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-
+      - name: Install Playwright Browsers in Storybook
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        shell: bash
         run: |
           cd apps/storybook
-          pnpm exec playwright install chromium --with-deps
+          pnpm exec playwright install --with-deps
       - name: Build Packages
         run: pnpm run build
       - name: Run ESLint
