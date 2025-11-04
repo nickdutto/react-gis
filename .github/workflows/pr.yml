@@ -40,6 +40,8 @@ jobs:
       - name: Install Dependencies
         shell: bash
         run: pnpm install --frozen-lockfile
+      - name: Install Playwright Browsers
+        run: pnpm exec playwright install --with-deps
       - name: Build Packages
         run: pnpm run build
       - name: Run ESLint
