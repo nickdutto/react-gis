@@ -4,18 +4,19 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "test": "vitest",
-    "test:ui": "vitest --ui",
-    "typedoc": "typedoc",
-    "typedoc:get-entry-points": "node ./scripts/typedoc/get-entry-points.js",
     "format": "turbo run format --continue",
     "format:fix": "turbo run format:fix --continue",
     "lint": "turbo run lint --continue",
     "lint:fix": "turbo run lint:fix --continue",
     "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
+    "test:ui": "vitest --ui",
     "changeset": "changeset",
     "changeset:version": "changeset version",
-    "changeset:publish": "changeset publish"
+    "changeset:publish": "changeset publish",
+    "typedoc": "typedoc",
+    "typedoc:get-entry-points": "node ./scripts/typedoc/get-entry-points.js"
   },
   "devDependencies": {
     "@changesets/cli": "2.29.7",

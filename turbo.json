@@ -11,13 +11,6 @@
       "cache": false,
       "persistent": true
     },
-    "test": {
-      "cache": false
-    },
-    "test:ui": {
-      "cache": false,
-      "persistent": true
-    },
     "format": {
       "cache": false
     },
@@ -32,6 +25,13 @@
     },
     "typecheck": {
       "cache": false
+    },
+    "test": {
+      "cache": false
+    },
+    "test:watch": {
+      "cache": false,
+      "persistent": true
     }
   }
 }

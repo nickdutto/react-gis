@@ -10,7 +10,9 @@
     "format:fix": "prettier --write . --ignore-path ../../.gitignore --ignore-path ../../.prettierignore",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest --watch"
   },
   "dependencies": {
     "@react-gis/openlayers": "workspace:*",

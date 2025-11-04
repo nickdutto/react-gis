@@ -1,0 +1,52 @@
+name: PR
+
+on:
+  pull_request:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Lint, Typecheck, Formatting, Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
+        with:
+          fetch-depth: 0
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4.2.0
+      - name: Setup Node
+        uses: actions/setup-node@v5.0.0
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+      - name: Setup pnpm cache
+        uses: actions/cache@v4.3.0
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      - name: Install Dependencies
+        shell: bash
+        run: pnpm install --frozen-lockfile
+      - name: Build Packages
+        run: pnpm run build
+      - name: Run ESLint
+        run: pnpm run lint
+      - name: Run Typecheck
+        run: pnpm run typecheck
+      - name: Check Formatting
+        run: pnpm run format
+      - name: Run Tests
+        run: pnpm run test
