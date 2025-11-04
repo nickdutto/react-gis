@@ -43,7 +43,7 @@ jobs:
       - name: Install Playwright Browsers
         run: |
           cd apps/storybook
-          pnpm exec playwright install --with-deps
+          pnpm exec playwright install chromium --with-deps
       - name: Build Packages
         run: pnpm run build
       - name: Run ESLint
