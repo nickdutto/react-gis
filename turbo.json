@@ -7,6 +7,15 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**", "build/**"]
     },
+    "clean": {
+      "cache": false
+    },
+    "clean:turbo": {
+      "cache": false
+    },
+    "clean:hard": {
+      "cache": false
+    },
     "dev": {
       "cache": false,
       "persistent": true
@@ -32,6 +41,9 @@
     "test:watch": {
       "cache": false,
       "persistent": true
+    },
+    "publint": {
+      "cache": false
     }
   }
 }

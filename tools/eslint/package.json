@@ -9,6 +9,11 @@
     "./react": "./react.js",
     "./storybook": "./storybook.js"
   },
+  "scripts": {
+    "clean": "rimraf dist",
+    "clean:turbo": "rimraf .turbo",
+    "clean:hard": "rimraf node_modules"
+  },
   "devDependencies": {
     "@eslint/compat": "1.4.1",
     "@eslint/js": "9.39.1",
