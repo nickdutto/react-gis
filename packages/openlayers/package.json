@@ -51,7 +51,8 @@
     "format:fix": "prettier --write . --ignore-path ../../.gitignore --ignore-path ../../.prettierignore",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "publint": "publint --strict"
   },
   "devDependencies": {
     "@react-gis/eslint": "workspace:*",

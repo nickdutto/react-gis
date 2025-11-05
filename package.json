@@ -18,9 +18,11 @@
     "test:ui": "vitest --ui",
     "validate": "turbo run lint && turbo run typecheck && turbo run format && turbo run test",
     "validate:build": "turbo run build && turbo run lint && turbo run typecheck && turbo run format && turbo run test",
+    "release": "pnpm run build && pnpm run publint && pnpm run validate && pnpm run changeset",
     "changeset": "changeset",
     "changeset:version": "changeset version",
     "changeset:publish": "changeset publish",
+    "publint": "turbo run publint",
     "typedoc": "typedoc",
     "typedoc:get-entry-points": "node ./scripts/typedoc/get-entry-points.js"
   },

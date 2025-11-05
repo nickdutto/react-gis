@@ -41,6 +41,9 @@
     "test:watch": {
       "cache": false,
       "persistent": true
+    },
+    "publint": {
+      "cache": false
     }
   }
 }
