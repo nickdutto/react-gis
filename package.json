@@ -16,6 +16,8 @@
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
     "test:ui": "vitest --ui",
+    "validate": "turbo run lint && turbo run typecheck && turbo run format && turbo run test",
+    "validate:build": "turbo run build && turbo run lint && turbo run typecheck && turbo run format && turbo run test",
     "changeset": "changeset",
     "changeset:version": "changeset version",
     "changeset:publish": "changeset publish",
