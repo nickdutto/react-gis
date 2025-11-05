@@ -4,8 +4,11 @@
   "version": "0.1.6",
   "type": "module",
   "scripts": {
-    "dev": "storybook dev -p 6006",
     "build": "storybook build -o ./dist",
+    "clean": "rimraf dist",
+    "clean:turbo": "rimraf .turbo",
+    "clean:hard": "rimraf node_modules",
+    "dev": "storybook dev -p 6006",
     "format": "prettier --check . --ignore-path ../../.gitignore --ignore-path ../../.prettierignore",
     "format:fix": "prettier --write . --ignore-path ../../.gitignore --ignore-path ../../.prettierignore",
     "lint": "eslint .",
