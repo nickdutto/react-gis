@@ -16,9 +16,9 @@
   "postUpdateOptions": ["pnpmDedupe"],
   "packageRules": [
     {
-      "matchPackagePatterns": ["^next$", "^@next/", "^fumadocs-"],
       "matchUpdateTypes": ["major"],
-      "groupName": "nextjs-fumadocs"
+      "groupName": "nextjs-fumadocs",
+      "matchPackageNames": ["/^next$/", "/^@next//", "/^fumadocs-/"]
     }
   ]
 }
