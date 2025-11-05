@@ -1,9 +1,13 @@
-name: PR
+name: Cache Playwright
 
 on:
-  pull_request:
+  push:
     branches:
       - main
+    paths:
+      - "apps/storybook/package.json"
+  schedule:
+    - cron: "10 18 */2 * *"
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -11,8 +15,8 @@ permissions:
   contents: read
 
 jobs:
-  validate:
-    name: Lint, Typecheck, Formatting, Test
+  build_cache:
+    name: Build Playwright Cache
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -43,7 +47,6 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install Dependencies
-        shell: bash
         run: pnpm install --frozen-lockfile
 
       - name: Cache Playwright
@@ -61,18 +64,3 @@ jobs:
         run: |
           cd apps/storybook
           pnpm exec playwright install --with-deps
-
-      - name: Build Packages
-        run: pnpm run build
-
-      - name: Run ESLint
-        run: pnpm run lint
-
-      - name: Run Typecheck
-        run: pnpm run typecheck
-
-      - name: Check Formatting
-        run: pnpm run format
-
-      - name: Run Tests
-        run: pnpm run test
