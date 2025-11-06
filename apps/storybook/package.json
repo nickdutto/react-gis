@@ -26,10 +26,10 @@
   "devDependencies": {
     "@react-gis/eslint": "workspace:*",
     "@react-gis/typescript": "workspace:*",
-    "@storybook/addon-a11y": "10.0.4",
-    "@storybook/addon-docs": "10.0.4",
-    "@storybook/addon-vitest": "10.0.4",
-    "@storybook/react-vite": "10.0.4",
+    "@storybook/addon-a11y": "10.0.5",
+    "@storybook/addon-docs": "10.0.5",
+    "@storybook/addon-vitest": "10.0.5",
+    "@storybook/react-vite": "10.0.5",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
     "@vitejs/plugin-react": "5.1.0",
@@ -37,10 +37,10 @@
     "@vitest/coverage-v8": "4.0.7",
     "@vitest/spy": "4.0.7",
     "playwright": "1.56.1",
-    "storybook": "10.0.4",
+    "storybook": "10.0.5",
     "storybook-addon-deep-controls": "0.10.0",
     "typescript": "5.9.3",
-    "vite": "7.1.12",
+    "vite": "7.2.0",
     "vite-tsconfig-paths": "5.1.4",
     "vitest": "4.0.7"
   }
