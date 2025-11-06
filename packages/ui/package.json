@@ -37,7 +37,7 @@
   "exports": {
     "./styles/globals.css": "./src/styles/globals.css",
     "./postcss.config": "./postcss.config.mjs",
-    "./components/*": "./src/components/*.tsx",
+    "./components/button": "./src/components/button/index.ts",
     "./hooks/*": "./src/hooks/*.ts",
     "./lib/*": "./src/lib/*.ts"
   }
