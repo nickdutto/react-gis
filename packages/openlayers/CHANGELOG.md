@@ -1,5 +1,13 @@
 # @react-gis/openlayers
 
+## 1.1.2
+
+### Patch Changes
+
+- d80a83f: #30
+  - Upgrade `vite` dependency
+  - Remove `react-dom` from `peerDependencies`
+
 ## 1.1.1
 
 ### Patch Changes
