@@ -54,8 +54,7 @@ export interface DocsLayoutProps extends BaseLayoutProps {
 }
 
 interface SidebarOptions
-  extends ComponentProps<"aside">,
-    Pick<SidebarProps, "defaultOpenLevel" | "prefetch"> {
+  extends ComponentProps<"aside">, Pick<SidebarProps, "defaultOpenLevel" | "prefetch"> {
   components?: Partial<SidebarComponents>;
 
   /**
