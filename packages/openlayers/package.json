@@ -57,11 +57,11 @@
   "devDependencies": {
     "@react-gis/eslint": "workspace:*",
     "@react-gis/typescript": "workspace:*",
-    "@types/react": "19.2.5",
+    "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "5.1.1",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
     "typescript": "5.9.3",
     "vite": "7.2.2"
   },

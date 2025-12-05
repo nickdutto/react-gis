@@ -20,8 +20,8 @@
   "dependencies": {
     "@react-gis/openlayers": "workspace:*",
     "ol": "10.7.0",
-    "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react": "19.2.1",
+    "react-dom": "19.2.1"
   },
   "devDependencies": {
     "@react-gis/eslint": "workspace:*",
@@ -30,7 +30,7 @@
     "@storybook/addon-docs": "10.0.7",
     "@storybook/addon-vitest": "10.0.7",
     "@storybook/react-vite": "10.0.7",
-    "@types/react": "19.2.5",
+    "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "5.1.1",
     "@vitest/browser-playwright": "4.0.9",
