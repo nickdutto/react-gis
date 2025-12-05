@@ -10,6 +10,7 @@ export const theme: ThemeVars = {
   // UI
   appBg: "#131316",
   appContentBg: "#101012",
+  appHoverBg: "#73e60024",
   appPreviewBg: "#101012",
   appBorderColor: "#1D1D20",
   appBorderRadius: 4,
