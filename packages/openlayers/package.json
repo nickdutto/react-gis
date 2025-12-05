@@ -1,8 +1,33 @@
 {
   "name": "@react-gis/openlayers",
-  "license": "MIT",
   "version": "1.1.2",
-  "private": false,
+  "license": "MIT",
+  "description": "React components and hooks for OpenLayers",
+  "homepage": "https://reactgis.nickdutto.dev/docs",
+  "author": {
+    "name": "nickdutto",
+    "url": "https://github.com/nickdutto"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickdutto/react-gis.git",
+    "directory": "packages/openlayers"
+  },
+  "bugs": {
+    "url": "https://github.com/nickdutto/react-gis/issues"
+  },
+  "keywords": [
+    "react",
+    "react-gis",
+    "ol",
+    "openlayers",
+    "typescript",
+    "maps",
+    "mapping",
+    "webgis",
+    "gis",
+    "geospatial"
+  ],
   "type": "module",
   "sideEffects": false,
   "files": [
