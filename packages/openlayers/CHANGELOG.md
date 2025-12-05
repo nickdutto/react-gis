@@ -1,5 +1,15 @@
 # @react-gis/openlayers
 
+## 1.1.3
+
+### Patch Changes
+
+- c325caa: #44
+  - Add extra metadata to `package.json` for documentation and discoverability
+
+- 34946be: #36
+  - Upgrade `vite` dependency
+
 ## 1.1.2
 
 ### Patch Changes
