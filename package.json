@@ -30,7 +30,7 @@
     "@changesets/cli": "2.29.8",
     "@react-gis/prettier": "workspace:*",
     "@react-gis/typescript": "workspace:*",
-    "@tanstack/config": "0.22.2",
+    "@tanstack/vite-config": "0.4.3",
     "@types/node": "24.10.1",
     "@vitest/ui": "4.0.15",
     "eslint": "9.39.1",
