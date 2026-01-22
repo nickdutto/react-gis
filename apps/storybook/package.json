@@ -20,28 +20,28 @@
   "dependencies": {
     "@react-gis/openlayers": "workspace:*",
     "ol": "10.7.0",
-    "react": "19.2.1",
-    "react-dom": "19.2.1"
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
     "@react-gis/eslint": "workspace:*",
     "@react-gis/typescript": "workspace:*",
-    "@storybook/addon-a11y": "10.1.4",
-    "@storybook/addon-docs": "10.1.4",
-    "@storybook/addon-vitest": "10.1.4",
-    "@storybook/react-vite": "10.1.4",
-    "@types/react": "19.2.7",
+    "@storybook/addon-a11y": "10.2.0",
+    "@storybook/addon-docs": "10.2.0",
+    "@storybook/addon-vitest": "10.2.0",
+    "@storybook/react-vite": "10.2.0",
+    "@types/react": "19.2.9",
     "@types/react-dom": "19.2.3",
-    "@vitejs/plugin-react": "5.1.1",
-    "@vitest/browser-playwright": "4.0.15",
-    "@vitest/coverage-v8": "4.0.15",
-    "@vitest/spy": "4.0.15",
+    "@vitejs/plugin-react": "5.1.2",
+    "@vitest/browser-playwright": "4.0.17",
+    "@vitest/coverage-v8": "4.0.17",
+    "@vitest/spy": "4.0.17",
     "playwright": "1.57.0",
-    "storybook": "10.1.10",
+    "storybook": "10.2.0",
     "storybook-addon-deep-controls": "0.10.0",
     "typescript": "5.9.3",
-    "vite": "7.2.6",
+    "vite": "7.3.1",
     "vite-tsconfig-paths": "5.1.4",
-    "vitest": "4.0.15"
+    "vitest": "4.0.17"
   }
 }
