@@ -1,4 +1,4 @@
-import { tanstackViteConfig } from "@tanstack/config/vite";
+import { tanstackViteConfig } from "@tanstack/vite-config";
 import react from "@vitejs/plugin-react";
 import { defineConfig, mergeConfig } from "vite";
 
