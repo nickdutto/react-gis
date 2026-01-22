@@ -7,7 +7,7 @@
 - a41b97d: #54
   - Update all non-major dependencies
 
-- e6eb961: #51
+- e6eb961: #52
   - Migrate build system to `@tanstack/vite-config` from `@tanstack/config`.
 
 ## 1.1.3
