@@ -26,7 +26,7 @@ jobs:
         uses: pnpm/action-setup@v4.2.0
 
       - name: Setup Node
-        uses: actions/setup-node@v6.1.0
+        uses: actions/setup-node@v6.2.0
         with:
           node-version-file: .nvmrc
           package-manager-cache: false
@@ -52,7 +52,7 @@ jobs:
         run: pnpm run build --filter="@react-gis/openlayers"
 
       - name: Run Changesets (version or publish)
-        uses: changesets/action@v1.5.3
+        uses: changesets/action@v1.6.0
         with:
           version: pnpm run changeset:version
           publish: pnpm run changeset:publish
