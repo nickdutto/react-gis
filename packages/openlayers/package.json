@@ -82,13 +82,13 @@
   "devDependencies": {
     "@react-gis/eslint": "workspace:*",
     "@react-gis/typescript": "workspace:*",
-    "@types/react": "19.2.7",
+    "@types/react": "19.2.9",
     "@types/react-dom": "19.2.3",
-    "@vitejs/plugin-react": "5.1.1",
-    "react": "19.2.1",
-    "react-dom": "19.2.1",
+    "@vitejs/plugin-react": "5.1.2",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
     "typescript": "5.9.3",
-    "vite": "7.2.6"
+    "vite": "7.3.1"
   },
   "peerDependencies": {
     "ol": "^10.6.0",
