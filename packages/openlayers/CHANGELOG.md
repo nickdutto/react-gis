@@ -1,5 +1,15 @@
 # @react-gis/openlayers
 
+## 1.1.4
+
+### Patch Changes
+
+- a41b97d: #54
+  - Update all non-major dependencies
+
+- e6eb961: #51
+  - Migrate build system to `@tanstack/vite-config` from `@tanstack/config`.
+
 ## 1.1.3
 
 ### Patch Changes
